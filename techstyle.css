@@ -1,0 +1,166 @@
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+    background-color: #121212;
+    background-size: cover;
+    color: white;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    position: relative; /* Ensure body is a positioning context */
+    overflow: hidden; /* Prevent scrolling */
+}
+
+/* Section Container */
+.section-container {
+    border: 2px solid #FFD700; 
+    padding: 30px;
+    margin: 40px auto;
+    width: 80%;
+    max-width: 800px;
+    border-radius: 15px;
+    background-color: rgba(0, 0, 0, 0.8); 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); 
+    position: relative; /* Ensure content is above the background animation */
+    z-index: 2; /* Higher z-index to stay above the animation */
+}
+
+.section-container h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+/* Images Container */
+.images-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 20px;
+    flex-wrap: wrap; 
+}
+
+/* Image Box */
+.image-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.image-box:hover {
+    transform: scale(1.1); 
+    opacity: 0.9;
+}
+
+.image-box img {
+    width: 100px;
+    height: 100px;
+    border-radius: 15px;
+    margin-bottom: 10px;
+    transition: box-shadow 0.3s ease;
+}
+
+.image-box:hover img {
+    box-shadow: 0 0 20px 5px #FFD700;
+}
+
+.image-box span {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #FFD700; 
+}
+
+/* Navigation Bar */
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    background-color: rgba(0, 0, 0, 0.9); 
+    padding: 15px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 3; /* Ensure navbar is above everything */
+}
+
+.navbar button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: bold;
+    padding: 10px 30px;
+    cursor: pointer;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+.navbar button:hover {
+    color: #C86BFA; 
+}
+
+/* Background Animation Container */
+.bganimation {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 1; /* Ensure it stays behind the content */
+}
+
+.bganimation .shape {
+    position: absolute;
+    opacity: 0;
+    animation: popUp 4s infinite ease-in-out;
+}
+
+.bganimation .circle {
+    background: #3d0066;
+    border-radius: 50%;
+}
+
+.bganimation .square {
+    background: #6b5b95;
+}
+
+/* Animation Delays for Shapes */
+.bganimation .shape:nth-child(1) { animation-delay: 0s; }
+.bganimation .shape:nth-child(2) { animation-delay: 1s; }
+.bganimation .shape:nth-child(3) { animation-delay: 2s; }
+.bganimation .shape:nth-child(4) { animation-delay: 3s; }
+.bganimation .shape:nth-child(5) { animation-delay: 4s; }
+.bganimation .shape:nth-child(6) { animation-delay: 0.5s; }
+.bganimation .shape:nth-child(7) { animation-delay: 1.5s; }
+.bganimation .shape:nth-child(8) { animation-delay: 2.5s; }
+.bganimation .shape:nth-child(9) { animation-delay: 3.5s; }
+.bganimation .shape:nth-child(10) { animation-delay: 4.5s; }
+
+/* Keyframes for Pop-Up Animation */
+@keyframes popUp {
+    0% {
+        opacity: 0;
+        transform: scale(0);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(0);
+    }
+}

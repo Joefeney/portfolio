@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Dangrek&display=swap');
+
+.text {
+    font-family: "Dangrek", serif;
+    font-size: 30px;
+    background: linear-gradient(45deg, #3d0066, #5c0099, #c86bfa, #fdc500, #ffd500, #ffee32, #03071e);
+    background-clip: text;
+    color: transparent;
+    background-size: 400% 400%;
+    animation: gradient 3s ease infinite;
+}
+
+/* Correct Keyframe Animation */
+@keyframes gradient {
+    0% {
+        background-position: 0%;
+    }
+    50% {
+        background-position: 100%;
+    }
+    100% {
+        background-position: 0%;
+    }
+}
