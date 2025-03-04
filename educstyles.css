@@ -1,0 +1,37 @@
+/* Education Background Section */
+.education-background {
+    width: 50%;
+    margin: auto;
+    margin-top: 100px;
+    padding: 20px;
+    border-radius: 15px;
+    border: 2px solid #FFD700;
+    background-color: rgba(255, 255, 255, 0.1);
+    z-index: 1;
+    position: relative;
+    overflow: auto;
+    margin-bottom: 80px;
+}
+
+.education-background h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #FFD700; /* Gold color for the main heading */
+    text-align: center;
+}
+
+.education-item {
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+.education-item h2 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    color: #FFD700; /* Gold color for sub-headings */
+}
+
+.education-item p {
+    margin: 5px 0;
+    color: #e1e1e1; /* Light gray for text */
+}

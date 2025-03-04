@@ -1,11 +1,9 @@
-/* Basic reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Body styles */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -16,8 +14,31 @@ body {
     flex-direction: column;
     min-height: 100vh;
 }
+.edu-btn {
+    position: absolute; 
+    top: 20px; 
+    left: 20px; 
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #121212; 
+    background-color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    z-index: 3;
+}
 
-/* About Me Section */
+.edu-btn:hover {
+    background-color: #f0f0f0;
+    transform: scale(1.05);
+}
+
+.edu-btn:active {
+    transform: scale(0.95);
+}
+
 .about-me {
     width: 50%;
     margin: auto;
@@ -37,7 +58,6 @@ body {
     margin-bottom: 10px;
 }
 
-/* Navigation Bar */
 nav {
     display: flex;
     justify-content: space-around;
@@ -47,10 +67,9 @@ nav {
     bottom: 0;
     width: 100%;
     background-color: rgba(0, 0, 0, 0.7);
-    z-index: 2; /* Ensure the nav is above other elements */
+    z-index: 2; 
 }
 
-/* Button Styles */
 button {
     font-size: 18px;
     color: #e1e1e1;
