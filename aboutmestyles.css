@@ -1,9 +1,11 @@
+/* General Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Body Styling */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -14,33 +16,11 @@ body {
     flex-direction: column;
     min-height: 100vh;
 }
-.edu-btn {
-    position: absolute; 
-    top: 20px; 
-    left: 20px; 
-    padding: 10px 20px;
-    font-size: 16px;
-    font-weight: 600;
-    color: #121212; 
-    background-color: white;
-    border: none;
-    border-radius: 25px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-    z-index: 3;
-}
 
-.edu-btn:hover {
-    background-color: #f0f0f0;
-    transform: scale(1.05);
-}
-
-.edu-btn:active {
-    transform: scale(0.95);
-}
-
+/* About Me Section */
 .about-me {
-    width: 50%;
+    width: 90%; /* Responsive width */
+    max-width: 600px; /* Maximum width for larger screens */
     margin: auto;
     margin-top: 100px;
     padding: 20px;
@@ -53,11 +33,50 @@ body {
     margin-bottom: 80px; 
 }
 
-.about-me h2 {
-    font-size: 24px;
-    margin-bottom: 10px;
+/* Typing Animation for "About Me..." */
+.joe {
+    width: 20ch; /* Width of the text */
+    white-space: nowrap; /* Prevent text from wrapping */
+    font-family: monospace; /* Monospace font for typing effect */
+    overflow: hidden; /* Hide overflow text */
+    border-right: 2px solid #ffd500; /* Cursor effect */
+    animation: typing 2s steps(20) infinite alternate-reverse, blink-caret 0.75s step-end infinite;
+    margin-bottom: 10px; /* Add some space below the heading */
+    text-align: left; /* Align text to the left */
+    padding: 0; /* Remove any padding */
+    margin: 0; /* Remove any margin */
+    line-height: 1.2; /* Adjust line height for better spacing */
 }
 
+/* Typing Animation Keyframes */
+@keyframes typing {
+    from {
+        width: 0ch; /* Start with no width */
+        color: #ffffff; /* Start with white text */
+    }
+    to {
+        width: 20ch; /* End with full width */
+        color: #ffd500; /* End with gold text */
+    }
+}
+
+/* Cursor Blink Animation Keyframes */
+@keyframes blink-caret {
+    from, to {
+        border-color: transparent; /* Cursor invisible */
+    }
+    50% {
+        border-color: #ffd500; /* Cursor visible */
+    }
+}
+
+/* Paragraph Styling */
+.about-me p {
+    text-align: left; /* Align paragraph text to the left */
+    margin-top: 10px; /* Add some space between the heading and paragraph */
+}
+
+/* Navigation Styling */
 nav {
     display: flex;
     justify-content: space-around;
@@ -70,6 +89,7 @@ nav {
     z-index: 2; 
 }
 
+/* Button Styling */
 button {
     font-size: 18px;
     color: #e1e1e1;

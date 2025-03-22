@@ -1,24 +1,21 @@
 .joe {
     width: 20ch;
-    white-space: nowrap;
+    white-space: nowrap; 
     font-family: monospace;
-    position: fixed;
-    top: 10%; 
-    left: 50%;
-    transform: translateX(-50%); 
     overflow: hidden;
     border-right: 2px solid #ffd500;
     animation: typing 2s steps(20) infinite alternate-reverse, blink-caret 0.75s step-end infinite;
+    margin-bottom: 10px;
 }
 
 @keyframes typing {
     from {
         width: 0ch;
-        color: #ffffff; 
+        color: #ffffff;
     }
     to {
         width: 20ch;
-        color: #ffd500;
+        color: #ffd500; 
     }
 }
 
