@@ -93,35 +93,7 @@ body {
     color: #FFD700;
 }
 
-
-.navbar {
-    display: flex;
-    justify-content: space-around;
-    background-color: rgba(0, 0, 0, 0.9); 
-    padding: 15px 0;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    z-index: 3; 
-    font-family: Arial, sans-serif;
-}
-
-.navbar button {
-    background: none;
-    border: none;
-    color: white;
-    font-size: 1.1rem;
-    font-weight: bold;
-    padding: 10px 30px;
-    cursor: pointer;
-    margin: 0 10px;
-    transition: color 0.3s ease;
-}
-
-.navbar button:hover {
-    color: #C86BFA; 
-}
-
+/* Navbar Styles */
 nav {
     display: flex;
     justify-content: space-around;
@@ -131,7 +103,7 @@ nav {
     bottom: 0;
     width: 100%;
     background-color: rgba(0, 0, 0, 0.7);
-    z-index: 2; 
+    z-index: 1; 
 }
 
 button {
@@ -174,7 +146,7 @@ button:after {
     transition-property: width, left;
 }
 
-
+/* Background Animation */
 .bganimation {
     position: absolute;
     top: 0;
@@ -199,7 +171,6 @@ button:after {
 .bganimation .square {
     background: #6b5b95;
 }
-
 
 .bganimation .shape:nth-child(1) { animation-delay: 0s; }
 .bganimation .shape:nth-child(2) { animation-delay: 1s; }
