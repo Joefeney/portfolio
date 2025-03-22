@@ -1,9 +1,9 @@
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
 
 body {
     margin: 0;
@@ -20,14 +20,14 @@ body {
 }
 
 
-.background-shapes {
+.bganimation {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     overflow: hidden;
-    z-index: 0; /
+    z-index: 0;
 }
 
 
@@ -39,16 +39,23 @@ body {
     justify-content: center;
     padding-bottom: 60px;
     position: relative;
-    z-index: 1; 
+    z-index: 1;
 }
 
 .hero img {
     width: 200px;
     border-radius: 50%;
+    margin-bottom: 20px;
 }
 
 .hero h1 {
     font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 18px;
+    color: #FFD700;
 }
 
 
@@ -56,15 +63,16 @@ nav {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding: 20px;
+    padding: 15px 20px;
     position: fixed;
     bottom: 0;
     width: 100%;
     background-color: rgba(0, 0, 0, 0.7);
-    z-index: 1; 
+    z-index: 2;
+    height: 60px;
 }
 
-button {
+nav button {
     font-size: 18px;
     color: #e1e1e1;
     font-family: inherit;
@@ -77,20 +85,21 @@ button {
     transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
     transition-duration: 400ms;
     transition-property: color;
+    padding: 10px 20px;
 }
 
-button:focus,
-button:hover {
+nav button:focus,
+nav button:hover {
     color: #C86BFA;
 }
 
-button:focus:after,
-button:hover:after {
+nav button:focus:after,
+nav button:hover:after {
     width: 100%;
     left: 0%;
 }
 
-button:after {
+nav button:after {
     content: "";
     pointer-events: none;
     bottom: -2px;
@@ -102,4 +111,43 @@ button:after {
     transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
     transition-duration: 400ms;
     transition-property: width, left;
+}
+
+
+@media (max-width: 768px) {
+    .hero img {
+        width: 150px;
+    }
+
+    .hero h1 {
+        font-size: 24px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    nav button {
+        font-size: 16px;
+        padding: 8px 15px; 
+    }
+}
+
+@media (max-width: 480px) {
+    .hero img {
+        width: 120px;
+    }
+
+    .hero h1 {
+        font-size: 20px;
+    }
+
+    .hero p {
+        font-size: 14px; 
+    }
+
+    nav button {
+        font-size: 14px;
+        padding: 6px 10px;
+    }
 }

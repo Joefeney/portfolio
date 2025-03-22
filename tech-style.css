@@ -1,11 +1,10 @@
-/* Basic reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Body styles */
+
 body {
     background-color: #121212;
     background-size: cover;
@@ -23,7 +22,7 @@ body {
     overflow: hidden;
 }
 
-/* Section Container */
+
 .section-container {
     border: 2px solid #FFD700;
     padding: 20px;
@@ -40,9 +39,10 @@ body {
 .section-container h1 {
     font-size: 2rem;
     margin-bottom: 20px;
+    color: #FFD700;
 }
 
-/* Images Container */
+
 .images-container {
     display: flex;
     justify-content: center;
@@ -51,7 +51,7 @@ body {
     flex-wrap: wrap;
 }
 
-/* Image Box */
+
 .image-box {
     display: flex;
     flex-direction: column;
@@ -83,7 +83,7 @@ body {
     color: #FFD700;
 }
 
-/* Navigation Bar */
+
 .navbar {
     display: flex;
     justify-content: space-around;
@@ -136,7 +136,6 @@ body {
     transition-property: width, left;
 }
 
-/* Background Animation Container */
 .bganimation {
     position: absolute;
     top: 0;
@@ -162,7 +161,7 @@ body {
     background: #6b5b95;
 }
 
-/* Animation Delays for Shapes */
+
 .bganimation .shape:nth-child(1) { animation-delay: 0s; }
 .bganimation .shape:nth-child(2) { animation-delay: 1s; }
 .bganimation .shape:nth-child(3) { animation-delay: 2s; }
@@ -174,7 +173,7 @@ body {
 .bganimation .shape:nth-child(9) { animation-delay: 3.5s; }
 .bganimation .shape:nth-child(10) { animation-delay: 4.5s; }
 
-/* Keyframes for Pop-Up Animation */
+
 @keyframes popUp {
     0% {
         opacity: 0;
@@ -190,7 +189,6 @@ body {
     }
 }
 
-/* Media Queries for Responsiveness */
 @media (max-width: 768px) {
     .section-container h1 {
         font-size: 1.5rem;
@@ -214,6 +212,7 @@ body {
 @media (max-width: 480px) {
     .section-container {
         padding: 15px;
+        margin: 10px auto; 
     }
 
     .section-container h1 {
@@ -233,8 +232,32 @@ body {
         font-size: 0.8rem;
     }
 
+    .navbar {
+        padding: 10px;
+    }
+
     .navbar button {
         font-size: 14px;
         padding: 5px 10px;
+    }
+}
+
+@media (max-width: 320px) {
+    .section-container h1 {
+        font-size: 1rem;
+    }
+
+    .image-box img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .image-box span {
+        font-size: 0.7rem;
+    }
+
+    .navbar button {
+        font-size: 12px;
+        padding: 4px 8px;
     }
 }

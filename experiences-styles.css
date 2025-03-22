@@ -1,3 +1,10 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
 body {
     font-family: Arial, sans-serif;
     background-color: #121212;
@@ -6,17 +13,38 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
+    color: white;
 }
 
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 15px 0;
+    z-index: 2;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+header h1 {
+    font-size: 2rem;
+    color: #FFD700;
+    margin: 0;
+}
+
+
 .timeline-container {
-    width: 80%;
+    width: 90%;
     max-width: 800px;
-    height: 400px; /* Fixed height for scrollable area */
-    overflow-y: auto; /* Enable vertical scrolling */
-    background-color: #121212;
+    margin-top: 80px; 
+    margin-bottom: 80px; 
+    background-color: rgba(0, 0, 0, 0.8);
     border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
     padding: 20px;
 }
 
@@ -82,11 +110,16 @@ body {
 
 .timeline-content:hover {
     box-shadow: 0 0 20px rgba(200, 107, 250, 0.8), 0 0 30px rgba(200, 107, 250, 0.6);
-    transform: scale(1.05); 
+    transform: scale(1.05);
+}
+
+.timeline-content h1 {
+    margin-top: 0;
+    color: #3d0066;
 }
 
 .timeline-content h2 {
-    margin-top: 0;
+    margin: 10px 0;
     color: #3d0066;
 }
 
@@ -95,17 +128,61 @@ body {
     color: #333;
 }
 
+
 nav {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding: 20px;
+    padding: 15px 20px;
     position: fixed;
     bottom: 0;
     width: 100%;
     background-color: rgba(0, 0, 0, 0.7);
-    z-index: 1; 
+    z-index: 3;
+    height: 60px; 
 }
+
+nav button {
+    font-size: 18px;
+    color: #e1e1e1;
+    font-family: inherit;
+    font-weight: 800;
+    cursor: pointer;
+    position: relative;
+    border: none;
+    background: none;
+    text-transform: uppercase;
+    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition-duration: 400ms;
+    transition-property: color;
+    padding: 10px 20px;
+}
+
+nav button:focus,
+nav button:hover {
+    color: #C86BFA;
+}
+
+nav button:focus:after,
+nav button:hover:after {
+    width: 100%;
+    left: 0%;
+}
+
+nav button:after {
+    content: "";
+    pointer-events: none;
+    bottom: -2px;
+    left: 50%;
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background-color: #3D0066;
+    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition-duration: 400ms;
+    transition-property: width, left;
+}
+
 
 @media (max-width: 768px) {
     .timeline::before {
@@ -129,5 +206,41 @@ nav {
 
     .timeline-item:nth-child(even)::before {
         left: 50px;
+    }
+
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    nav button {
+        font-size: 16px;
+        padding: 8px 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.2rem;
+    }
+
+    .timeline-content {
+        padding: 15px;
+    }
+
+    .timeline-content h1 {
+        font-size: 1.2rem;
+    }
+
+    .timeline-content h2 {
+        font-size: 1rem;
+    }
+
+    .timeline-content p {
+        font-size: 0.9rem;
+    }
+
+    nav button {
+        font-size: 14px;
+        padding: 6px 10px;
     }
 }

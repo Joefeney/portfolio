@@ -4,7 +4,6 @@
     box-sizing: border-box;
 }
 
-
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -16,7 +15,6 @@ body {
     min-height: 100vh;
 }
 
-
 .about-me {
     width: 90%;
     max-width: 600px;
@@ -25,11 +23,11 @@ body {
     padding: 20px;
     border-radius: 15px;
     border: 2px solid #FFD700;
-    background-color: rgba(255, 255, 255, 0.1); 
-    z-index: 1; 
-    position: relative; 
+    background-color: rgba(255, 255, 255, 0.1);
+    z-index: 1;
+    position: relative;
     overflow: auto;
-    margin-bottom: 80px; 
+    margin-bottom: 80px;
 }
 
 .joe {
@@ -46,7 +44,6 @@ body {
     line-height: 1.2;
 }
 
-
 @keyframes typing {
     from {
         width: 0ch;
@@ -58,7 +55,6 @@ body {
     }
 }
 
-
 @keyframes blink-caret {
     from, to {
         border-color: transparent;
@@ -68,12 +64,10 @@ body {
     }
 }
 
-
 .about-me p {
     text-align: left;
     margin-top: 10px;
 }
-
 
 nav {
     display: flex;
@@ -84,9 +78,8 @@ nav {
     bottom: 0;
     width: 100%;
     background-color: rgba(0, 0, 0, 0.7);
-    z-index: 2; 
+    z-index: 2;
 }
-
 
 button {
     font-size: 18px;
@@ -126,4 +119,42 @@ button:after {
     transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
     transition-duration: 400ms;
     transition-property: width, left;
+}
+
+@media (max-width: 768px) {
+    .about-me {
+        margin-top: 80px;
+    }
+
+    .joe {
+        font-size: 16px;
+    }
+
+    .about-me p {
+        font-size: 14px;
+    }
+
+    nav button {
+        font-size: 16px;
+        padding: 8px 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-me {
+        margin-top: 60px;
+    }
+
+    .joe {
+        font-size: 14px;
+    }
+
+    .about-me p {
+        font-size: 12px;
+    }
+
+    nav button {
+        font-size: 14px;
+        padding: 6px 10px;
+    }
 }
