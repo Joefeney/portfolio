@@ -103,7 +103,7 @@ body {
     bottom: 0;
     width: 100%;
     z-index: 3; 
-    font-family: Arial, sans-serif; /* Ensure consistent font-family */
+    font-family: Arial, sans-serif;
 }
 
 .navbar button {
