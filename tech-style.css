@@ -4,7 +4,6 @@
     box-sizing: border-box;
 }
 
-
 body {
     background-color: #121212;
     background-size: cover;
@@ -21,7 +20,6 @@ body {
     position: relative;
     overflow: hidden;
 }
-
 
 .section-container {
     border: 2px solid #FFD700;
@@ -42,7 +40,6 @@ body {
     color: #FFD700;
 }
 
-
 .images-container {
     display: flex;
     justify-content: center;
@@ -50,7 +47,6 @@ body {
     margin-top: 20px;
     flex-wrap: wrap;
 }
-
 
 .image-box {
     display: flex;
@@ -83,12 +79,11 @@ body {
     color: #FFD700;
 }
 
-
-.navbar {
+nav {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding: 20px;
+    padding: 15px 20px;
     position: fixed;
     bottom: 0;
     width: 100%;
@@ -97,7 +92,7 @@ body {
     height: 60px;
 }
 
-.navbar button {
+nav button {
     font-size: 18px;
     color: #e1e1e1;
     font-family: inherit;
@@ -110,20 +105,35 @@ body {
     transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
     transition-duration: 400ms;
     transition-property: color;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex: 1;
+    justify-content: center;
 }
 
-.navbar button:focus,
-.navbar button:hover {
+nav button i {
+    font-size: 24px;
+    display: none;
+}
+
+nav button span {
+    display: inline;
+}
+
+nav button:focus,
+nav button:hover {
     color: #C86BFA;
 }
 
-.navbar button:focus:after,
-.navbar button:hover:after {
+nav button:focus:after,
+nav button:hover:after {
     width: 100%;
     left: 0%;
 }
 
-.navbar button:after {
+nav button:after {
     content: "";
     pointer-events: none;
     bottom: -2px;
@@ -162,7 +172,6 @@ body {
     background: #6b5b95;
 }
 
-
 .bganimation .shape:nth-child(1) { animation-delay: 0s; }
 .bganimation .shape:nth-child(2) { animation-delay: 1s; }
 .bganimation .shape:nth-child(3) { animation-delay: 2s; }
@@ -173,7 +182,6 @@ body {
 .bganimation .shape:nth-child(8) { animation-delay: 2.5s; }
 .bganimation .shape:nth-child(9) { animation-delay: 3.5s; }
 .bganimation .shape:nth-child(10) { animation-delay: 4.5s; }
-
 
 @keyframes popUp {
     0% {
@@ -204,7 +212,7 @@ body {
         font-size: 0.9rem;
     }
 
-    .navbar button {
+    nav button {
         font-size: 16px;
         padding: 6px 15px;
     }
@@ -213,7 +221,7 @@ body {
 @media (max-width: 480px) {
     .section-container {
         padding: 15px;
-        margin: 10px auto; 
+        margin: 10px auto;
     }
 
     .section-container h1 {
@@ -233,13 +241,21 @@ body {
         font-size: 0.8rem;
     }
 
-    .navbar {
+    nav {
         padding: 10px;
     }
 
-    .navbar button {
+    nav button {
         font-size: 14px;
         padding: 5px 10px;
+    }
+
+    nav button i {
+        display: inline;
+    }
+
+    nav button span {
+        display: none;
     }
 }
 
@@ -257,7 +273,7 @@ body {
         font-size: 0.7rem;
     }
 
-    .navbar button {
+    nav button {
         font-size: 12px;
         padding: 4px 8px;
     }

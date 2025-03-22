@@ -4,7 +4,6 @@
     box-sizing: border-box;
 }
 
-
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -19,7 +18,6 @@ body {
     position: relative;
 }
 
-
 .bganimation {
     position: absolute;
     top: 0;
@@ -29,7 +27,6 @@ body {
     overflow: hidden;
     z-index: 0;
 }
-
 
 .hero {
     flex: 1;
@@ -58,7 +55,6 @@ body {
     color: #FFD700;
 }
 
-
 nav {
     display: flex;
     justify-content: space-around;
@@ -86,6 +82,20 @@ nav button {
     transition-duration: 400ms;
     transition-property: color;
     padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex: 1;
+    justify-content: center;
+}
+
+nav button i {
+    font-size: 24px;
+    display: none;
+}
+
+nav button span {
+    display: inline;
 }
 
 nav button:focus,
@@ -113,7 +123,6 @@ nav button:after {
     transition-property: width, left;
 }
 
-
 @media (max-width: 768px) {
     .hero img {
         width: 150px;
@@ -129,7 +138,7 @@ nav button:after {
 
     nav button {
         font-size: 16px;
-        padding: 8px 15px; 
+        padding: 8px 15px;
     }
 }
 
@@ -143,11 +152,20 @@ nav button:after {
     }
 
     .hero p {
-        font-size: 14px; 
+        font-size: 14px;
     }
 
     nav button {
         font-size: 14px;
         padding: 6px 10px;
+    }
+
+
+    nav button i {
+        display: inline;
+    }
+
+    nav button span {
+        display: none;
     }
 }

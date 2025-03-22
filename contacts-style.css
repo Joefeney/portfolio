@@ -101,7 +101,7 @@ nav {
     height: 60px;
 }
 
-button {
+nav button {
     font-size: 18px;
     color: #e1e1e1;
     font-family: inherit;
@@ -114,20 +114,35 @@ button {
     transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
     transition-duration: 400ms;
     transition-property: color;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex: 1;
+    justify-content: center;
 }
 
-button:focus,
-button:hover {
+nav button i {
+    font-size: 24px;
+    display: none;
+}
+
+nav button span {
+    display: inline;
+}
+
+nav button:focus,
+nav button:hover {
     color: #C86BFA;
 }
 
-button:focus:after,
-button:hover:after {
+nav button:focus:after,
+nav button:hover:after {
     width: 100%;
     left: 0%;
 }
 
-button:after {
+nav button:after {
     content: "";
     pointer-events: none;
     bottom: -2px;
@@ -239,5 +254,13 @@ button:after {
     nav button {
         font-size: 14px;
         padding: 8px 10px;
+    }
+
+    nav button i {
+        display: inline;
+    }
+
+    nav button span {
+        display: none;
     }
 }

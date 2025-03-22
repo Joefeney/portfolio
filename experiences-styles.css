@@ -4,7 +4,6 @@
     box-sizing: border-box;
 }
 
-
 body {
     font-family: Arial, sans-serif;
     background-color: #121212;
@@ -16,7 +15,6 @@ body {
     min-height: 100vh;
     color: white;
 }
-
 
 header {
     position: fixed;
@@ -32,16 +30,14 @@ header {
 
 header h1 {
     font-size: 2rem;
-    color: #FFD700;
     margin: 0;
 }
-
 
 .timeline-container {
     width: 90%;
     max-width: 800px;
-    margin-top: 80px; 
-    margin-bottom: 80px; 
+    margin-top: 80px;
+    margin-bottom: 80px;
     background-color: rgba(0, 0, 0, 0.8);
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
@@ -128,7 +124,6 @@ header h1 {
     color: #333;
 }
 
-
 nav {
     display: flex;
     justify-content: space-around;
@@ -139,7 +134,7 @@ nav {
     width: 100%;
     background-color: rgba(0, 0, 0, 0.7);
     z-index: 3;
-    height: 60px; 
+    height: 60px;
 }
 
 nav button {
@@ -156,6 +151,20 @@ nav button {
     transition-duration: 400ms;
     transition-property: color;
     padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex: 1;
+    justify-content: center;
+}
+
+nav button i {
+    font-size: 24px;
+    display: none;
+}
+
+nav button span {
+    display: inline;
 }
 
 nav button:focus,
@@ -182,7 +191,6 @@ nav button:after {
     transition-duration: 400ms;
     transition-property: width, left;
 }
-
 
 @media (max-width: 768px) {
     .timeline::before {
@@ -242,5 +250,13 @@ nav button:after {
     nav button {
         font-size: 14px;
         padding: 6px 10px;
+    }
+
+    nav button i {
+        display: inline;
+    }
+
+    nav button span {
+        display: none;
     }
 }
