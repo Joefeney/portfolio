@@ -94,6 +94,7 @@ body {
     width: 100%;
     background-color: rgba(0, 0, 0, 0.7);
     z-index: 3;
+    height: 60px;
 }
 
 .navbar button {
