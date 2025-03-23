@@ -198,7 +198,7 @@ nav button:after {
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 820px) {
     .section-container h1 {
         font-size: 1.5rem;
     }
@@ -215,6 +215,16 @@ nav button:after {
     nav button {
         font-size: 16px;
         padding: 6px 15px;
+    }
+}
+
+@media (max-width: 695px) {
+    nav button i {
+        display: inline;
+    }
+
+    nav button span {
+        display: none;
     }
 }
 
@@ -248,14 +258,6 @@ nav button:after {
     nav button {
         font-size: 14px;
         padding: 5px 10px;
-    }
-
-    nav button i {
-        display: inline;
-    }
-
-    nav button span {
-        display: none;
     }
 }
 

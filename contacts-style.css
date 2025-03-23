@@ -232,6 +232,16 @@ nav button:after {
     }
 }
 
+@media (max-width: 695px) {
+    nav button i {
+        display: inline;
+    }
+
+    nav button span {
+        display: none;
+    }
+}
+
 @media (max-width: 480px) {
     .section-container {
         width: 95%;
@@ -254,13 +264,5 @@ nav button:after {
     nav button {
         font-size: 14px;
         padding: 8px 10px;
-    }
-
-    nav button i {
-        display: inline;
-    }
-
-    nav button span {
-        display: none;
     }
 }

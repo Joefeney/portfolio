@@ -1,4 +1,3 @@
-
 .shape {
     position: absolute;
     opacity: 0;
@@ -10,7 +9,6 @@
     border-radius: 50%;
 }
 
-/* Square shape */
 .square {
     background: #c86bfa; 
 }
@@ -30,7 +28,7 @@
     }
 }
 
-/* Individual shape animations */
+/* Existing shapes */
 .shape:nth-child(1) {
     left: 10%;
     top: 20%;
@@ -109,4 +107,85 @@
     width: 40px;
     height: 40px;
     animation-delay: 4.5s;
+}
+
+/* New shapes */
+.shape:nth-child(11) {
+    left: 15%;
+    top: 70%;
+    width: 55px;
+    height: 55px;
+    animation-delay: 0.2s;
+}
+
+.shape:nth-child(12) {
+    left: 65%;
+    top: 20%;
+    width: 45px;
+    height: 45px;
+    animation-delay: 1.2s;
+}
+
+.shape:nth-child(13) {
+    left: 85%;
+    top: 50%;
+    width: 65px;
+    height: 65px;
+    animation-delay: 2.2s;
+}
+
+.shape:nth-child(14) {
+    left: 35%;
+    top: 30%;
+    width: 75px;
+    height: 75px;
+    animation-delay: 3.2s;
+}
+
+.shape:nth-child(15) {
+    left: 75%;
+    top: 80%;
+    width: 50px;
+    height: 50px;
+    animation-delay: 4.2s;
+}
+
+.shape:nth-child(16) {
+    left: 25%;
+    top: 60%;
+    width: 60px;
+    height: 60px;
+    animation-delay: 0.7s;
+}
+
+.shape:nth-child(17) {
+    left: 55%;
+    top: 10%;
+    width: 70px;
+    height: 70px;
+    animation-delay: 1.7s;
+}
+
+.shape:nth-child(18) {
+    left: 95%;
+    top: 40%;
+    width: 40px;
+    height: 40px;
+    animation-delay: 2.7s;
+}
+
+.shape:nth-child(19) {
+    left: 45%;
+    top: 90%;
+    width: 80px;
+    height: 80px;
+    animation-delay: 3.7s;
+}
+
+.shape:nth-child(20) {
+    left: 10%;
+    top: 40%;
+    width: 50px;
+    height: 50px;
+    animation-delay: 4.7s;
 }
