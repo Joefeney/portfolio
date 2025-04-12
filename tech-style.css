@@ -147,6 +147,45 @@ nav button:after {
     transition-property: width, left;
 }
 
+nav #themeBtn {
+    font-size: 18px;
+    color: #e1e1e1;
+    font-family: inherit;
+    font-weight: 800;
+    cursor: pointer;
+    border: none;
+    background: none;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+}
+
+nav #themeBtn i {
+    font-size: 24px;
+    display: inline;
+}
+
+nav #themeBtn:hover {
+    color: #C86BFA;
+}
+
+nav #themeBtn:after {
+    content: "";
+    pointer-events: none;
+    bottom: -2px;
+    left: 50%;
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background-color: #3D0066;
+    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition-duration: 400ms;
+    transition-property: width, left;
+}
+
 .bganimation {
     position: absolute;
     top: 0;
@@ -187,6 +226,11 @@ nav button:after {
     .image-box span {
         font-size: 0.9rem;
     }
+    
+    nav #themeBtn {
+        font-size: 16px;
+        padding: 8px 15px;
+    }
 
     nav button {
         font-size: 16px;
@@ -200,6 +244,13 @@ nav button:after {
     }
 
     nav button span {
+        display: none;
+    }
+    nav #themeBtn i {
+        display: inline;
+    }
+
+    nav #themeBtn span {
         display: none;
     }
 }
@@ -235,9 +286,14 @@ nav button:after {
         font-size: 14px;
         padding: 5px 10px;
     }
+
+    nav #themeBtn {
+        font-size: 16px;
+        padding: 8px 15px;
+    }
 }
 
-@media (max-width: 320px) {
+@media (max-width: 795px) {
     .section-container h1 {
         font-size: 1rem;
     }
@@ -254,5 +310,9 @@ nav button:after {
     nav button {
         font-size: 12px;
         padding: 4px 8px;
+    }
+    nav #themeBtn {
+        font-size: 16px;
+        padding: 8px 15px;
     }
 }

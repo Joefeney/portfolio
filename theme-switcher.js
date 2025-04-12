@@ -1,15 +1,8 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const themeSelector = document.getElementById("theme-selector");
+    const themeBtn = document.getElementById("themeBtn");
     const body = document.body;
 
-    // Apply navbar styling to the dropdown
-    themeSelector.style.backgroundColor = "#121212";
-    themeSelector.style.color = "#e1e1e1";
-    themeSelector.style.fontFamily = "inherit";
-    themeSelector.style.border = "none";
-    themeSelector.style.padding = "10px";
-    themeSelector.style.cursor = "pointer";
-
+    // Define theme colors
     const themes = {
         "dark": "#121212",
         "light": "#fff5e1",
@@ -19,15 +12,54 @@ document.addEventListener("DOMContentLoaded", function () {
         "maroon": "#800000"
     };
 
+    // Set the default or saved theme
     const savedTheme = localStorage.getItem("selectedTheme");
     if (savedTheme && themes[savedTheme]) {
         body.style.backgroundColor = themes[savedTheme];
-        themeSelector.value = savedTheme;
+        themeBtn.querySelector("span").textContent = savedTheme.charAt(0).toUpperCase() + savedTheme.slice(1);  // Show theme name
+        updateThemeIcon(savedTheme);  // Update the icon accordingly
     }
 
-    themeSelector.addEventListener("change", function () {
-        const selectedTheme = themeSelector.value;
-        body.style.backgroundColor = themes[selectedTheme];
-        localStorage.setItem("selectedTheme", selectedTheme);
+    // Add event listener to the theme button
+    themeBtn.addEventListener("click", function () {
+        let currentTheme = body.getAttribute("data-theme");
+        
+        // Cycle through the themes
+        const themeOrder = ["dark", "light", "navy", "dustygold", "teal", "maroon"];
+        let currentIndex = themeOrder.indexOf(currentTheme);
+        let nextTheme = themeOrder[(currentIndex + 1) % themeOrder.length];
+
+        body.style.backgroundColor = themes[nextTheme];
+        body.setAttribute("data-theme", nextTheme);
+
+        themeBtn.querySelector("span").textContent = nextTheme.charAt(0).toUpperCase() + nextTheme.slice(1);  // Update button text
+        updateThemeIcon(nextTheme);
+
+        
+        localStorage.setItem("selectedTheme", nextTheme);
     });
+
+    function updateThemeIcon(theme) {
+        const icon = themeBtn.querySelector("i");
+        switch (theme) {
+            case "dark":
+                icon.className = "fas fa-moon";  // Moon for Dark theme
+                break;
+            case "light":
+                icon.className = "fas fa-sun";  // Sun for Light theme
+                break;
+            case "navy":
+                icon.className = "fas fa-anchor";  // Anchor for Navy theme
+                break;
+            case "dustygold":
+                icon.className = "fas fa-gem";  // Gold for Dusty Gold theme
+                break;
+            case "teal":
+                icon.className = "fas fa-tint";  // Water droplet for Teal theme
+                break;
+            case "maroon":
+                icon.className = "fas fa-tint";  // Tint for Maroon theme
+                break;
+        }
+    }
 });
