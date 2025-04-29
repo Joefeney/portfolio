@@ -8,32 +8,37 @@ button {
   border: none;
   background: none;
   text-transform: uppercase;
-  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
-  transition-duration: 400ms;
-  transition-property: color;
-    }
+  transition: color 400ms cubic-bezier(0.25, 0.8, 0.25, 1);
+  outline: none;
+}
 
-button:focus,
+
 button:hover {
   color: #C86BFA;
 }
 
-button:focus:after,
-button:hover:after {
-  width: 100%;
-  left: 0%;
+
+button:focus {
+  color: #C86BFA;
+  text-shadow: 0 0 5px #C86BFA, 0 0 10px #C86BFA;
 }
 
-button:after {
+button::after {
   content: "";
   pointer-events: none;
+  position: absolute;
   bottom: -2px;
   left: 50%;
-  position: absolute;
   width: 0%;
   height: 2px;
   background-color: #3D0066;
-  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
-  transition-duration: 400ms;
-  transition-property: width, left;
+  transition: width 400ms cubic-bezier(0.25, 0.8, 0.25, 1), 
+              left 400ms cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+
+button:hover::after,
+button:focus::after {
+  width: 100%;
+  left: 0%;
 }
