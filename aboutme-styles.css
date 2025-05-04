@@ -10,31 +10,82 @@ body {
     background-color: #121212;
     color: white;
     text-align: center;
-    overflow: auto; /* Allows scrolling */
+    overflow: auto;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-}
-
-.about-me {
-    width: 90%;
-    max-width: 600px;
-    margin: auto;
-    margin-top: 100px;
-    padding: 20px;
-    border-radius: 15px;
-    border: 2px solid #FFD700;
-    background-color: rgba(18, 18, 18, 0.9);
-    z-index: 1;
     position: relative;
-    overflow: auto;
-    margin-bottom: 80px;
 }
 
-.about-me p {
-    text-align: left;
-    margin-top: 20px;
-    line-height: 1.6;
+.bganimation {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.shape {
+    position: absolute;
+    animation: pop 5s ease-in-out;
+    pointer-events: none;
+}
+
+@keyframes pop {
+    0% {
+        opacity: 0;
+        transform: scale(0);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(0);
+    }
+}
+
+.circle {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: rgba(200, 107, 250, 1);
+}
+
+.square {
+    width: 50px;
+    height: 50px;
+    background-color: rgba(92, 0, 153, 0.5);
+}
+
+.hero {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 60px;
+    position: relative;
+    z-index: 1;
+}
+
+.hero img {
+    width: 200px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 24px;
+    color: #FFD700;
 }
 
 nav {
@@ -142,17 +193,38 @@ nav button:hover:after {
     left: 0%;
 }
 
+.about-me {
+    width: 90%;
+    max-width: 600px;
+    margin: auto;
+    margin-top: 100px;
+    padding: 20px;
+    border-radius: 15px;
+    border: 2px solid #FFD700;
+    background-color: rgba(18, 18, 18, 0.9);
+    z-index: 1;
+    position: relative;
+    overflow: auto;
+    margin-bottom: 80px;
+}
+
+.about-me p {
+    text-align: left;
+    margin-top: 20px;
+    line-height: 1.6;
+}
+
 @media (max-width: 768px) {
-    .about-me {
-        margin-top: 80px;
+    .hero img {
+        width: 150px;
     }
 
-    .joe {
+    .hero h1 {
+        font-size: 24px;
+    }
+
+    .hero p {
         font-size: 16px;
-    }
-
-    .about-me p {
-        font-size: 14px;
     }
 
     nav button {
@@ -160,7 +232,7 @@ nav button:hover:after {
         padding: 8px 15px;
     }
 
-    #themeBtn {
+    nav #themeBtn {
         font-size: 16px;
         padding: 8px 15px;
     }
@@ -179,16 +251,16 @@ nav button:hover:after {
 }
 
 @media (max-width: 480px) {
-    .about-me {
-        margin-top: 60px;
+    .hero img {
+        width: 120px;
     }
 
-    .joe {
+    .hero h1 {
+        font-size: 20px;
+    }
+
+    .hero p {
         font-size: 14px;
-    }
-
-    .about-me p {
-        font-size: 12px;
     }
 
     nav button,

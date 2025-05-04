@@ -1,3 +1,4 @@
+/* Existing CSS */
 * {
     margin: 0;
     padding: 0;
@@ -156,7 +157,6 @@ nav button:after {
     transition-property: width, left;
 }
 
-
 nav #themeBtn {
     font-size: 18px;
     color: #e1e1e1;
@@ -206,6 +206,12 @@ nav #themeBtn:after {
     z-index: 0;
 }
 
+.shape {
+    position: absolute;
+    animation: popUp 5s ease-in-out;
+    pointer-events: none;
+}
+
 @keyframes popUp {
     0% {
         opacity: 0;
@@ -219,6 +225,19 @@ nav #themeBtn:after {
         opacity: 0;
         transform: scale(0);
     }
+}
+
+.circle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(200, 107, 250, 1);
+}
+
+.square {
+    width: 40px;
+    height: 40px;
+    background-color: rgba(92, 0, 153, 0.5);
 }
 
 @media (max-width: 768px) {
