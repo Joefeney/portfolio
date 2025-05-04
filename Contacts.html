@@ -1,49 +1,56 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Joseph Emmanuel A. Magno | Contact Me</title>
-    <link rel="stylesheet" href="button.css">
-    <link rel="stylesheet" href="text-effect.css">
-    <link rel="stylesheet" href="contacts-style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-</head>
-<body>
-    <div class="bganimation"></div>
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Joseph Emmanuel A. Magno | Contact Me</title>
+        <link rel="stylesheet" href="button.css">
+        <link rel="stylesheet" href="text-effect.css">
+        <link rel="stylesheet" href="contacts-style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    </head>
+    <body>
+        <div class="bganimation"></div>
 
 
-    <div class="section-container">
-        <h1 class="text">Contact Me</h1>
-        <div class="images-container">
-            <div class="image-box">
-                <a href="https://github.com/Joefeney" target="_blank" class="image-link">
-                    <img src="githubs.png" alt="GitHub">
-                </a>
-            </div>
-            <div class="image-box">
-                <a href="https://www.linkedin.com/in/magno-joseph-emmanuel-a-76b150354/" target="_blank" class="image-link">
-                    <img src="linkedin.png" alt="LinkedIn">
-                </a>
+        <div class="section-container">
+            <h1 class="text">Contact Me</h1>
+            <div class="images-container">
+                <div class="image-box">
+                    <a href="https://github.com/Joefeney" target="_blank" class="image-link">
+                        <img src="githubs.png" alt="GitHub">
+                    </a>
+                </div>
+                <div class="image-box">
+                    <a href="https://www.linkedin.com/in/magno-joseph-emmanuel-a-76b150354/" target="_blank" class="image-link">
+                        <img src="linkedin.png" alt="LinkedIn">
+                    </a>
+                </div>
             </div>
         </div>
-    </div>
 
-    <nav>
-        <button onclick="location.href='index.html'"><i class="fas fa-home"></i><span>Home</span></button>
-        <button onclick="location.href='aboutme.html'"><i class="fas fa-user"></i><span>About Me</span></button>
-        <button onclick="location.href='techstack.html'"><i class="fas fa-code"></i><span>Tech Stack</span></button>
-        <button onclick="location.href='Contacts.html'"><i class="fas fa-envelope"></i><span>Contact</span></button>
+        <nav class="navbar fixed-bottom bg-dark bg-opacity-75 d-flex justify-content-around p-2 z-2">
+            <a href="index.html" class="btn text-white">
+              <i class="fas fa-home"></i><span class="ms-2">Home</span>
+            </a>
+            <a href="aboutme.html" class="btn text-white">
+              <i class="fas fa-user"></i><span class="ms-2">About Me</span>
+            </a>
+            <a href="techstack.html" class="btn text-white">
+              <i class="fas fa-code"></i><span class="ms-2">Tech Stack</span>
+            </a>
+            <a href="Contacts.html" class="btn text-white">
+              <i class="fas fa-envelope"></i><span class="ms-2">Contact</span>
+            </a>
+            <a href="#theme" id="themeBtn" class="btn text-white anchor-btn">
+                <i class="fas fa-moon"></i><span class="ms-2">Theme</span>
+              </a>
+          </nav>
 
-        <button id="themeBtn">
-            <i class="fas fa-moon"></i><span>Theme</span>
-        </button>
-    </nav>
 
+        <script src="bganimation.js"></script>
 
-    <script src="bganimation.js"></script>
-
-    <script src="theme-switcher.js"></script>
-    <script src="./oneko.js"></script>
-</body>
-</html>
+        <script src="theme-switcher.js"></script>
+        <script src="./oneko.js"></script>
+    </body>
+    </html>
