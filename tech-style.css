@@ -217,11 +217,11 @@ nav a:hover:after {
 }
 
 @media (max-width: 795px) {
-    nav button i {
+    nav a i {
         display: inline;
     }
 
-    nav button span {
+    nav a span {
         display: none;
     }
     nav #themeBtn i {

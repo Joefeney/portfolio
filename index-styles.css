@@ -68,48 +68,27 @@ nav {
     height: 60px;
 }
 
-nav button {
+nav a {
     font-size: 18px;
     color: #e1e1e1;
     font-family: inherit;
     font-weight: 800;
     cursor: pointer;
+    text-decoration: none;
     position: relative;
-    border: none;
-    background: none;
-    text-transform: uppercase;
-    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
-    transition-duration: 400ms;
-    transition-property: color;
-    padding: 10px 20px;
     display: flex;
     align-items: center;
     gap: 10px;
     flex: 1;
     justify-content: center;
+    transition: color 400ms cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
-nav button i {
-    font-size: 24px;
-    display: none;
-}
-
-nav button span {
-    display: inline;
-}
-
-nav button:focus,
-nav button:hover {
+nav a:hover {
     color: #C86BFA;
 }
 
-nav button:focus:after,
-nav button:hover:after {
-    width: 100%;
-    left: 0%;
-}
-
-nav button:after {
+nav a:after {
     content: "";
     pointer-events: none;
     bottom: -2px;
@@ -118,12 +97,15 @@ nav button:after {
     width: 0%;
     height: 2px;
     background-color: #3D0066;
-    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
-    transition-duration: 400ms;
-    transition-property: width, left;
+    transition: width 400ms, left 400ms;
 }
 
-nav #themeBtn {
+nav a:hover:after {
+    width: 100%;
+    left: 0%;
+}
+
+#themeBtn {
     font-size: 18px;
     color: #e1e1e1;
     font-family: inherit;
@@ -137,29 +119,7 @@ nav #themeBtn {
     align-items: center;
     gap: 10px;
     justify-content: center;
-}
-
-nav #themeBtn i {
-    font-size: 24px;
-    display: inline;
-}
-
-nav #themeBtn:hover {
-    color: #C86BFA;
-}
-
-nav #themeBtn:after {
-    content: "";
-    pointer-events: none;
-    bottom: -2px;
-    left: 50%;
-    position: absolute;
-    width: 0%;
-    height: 2px;
-    background-color: #3D0066;
-    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
-    transition-duration: 400ms;
-    transition-property: width, left;
+    position: relative;
 }
 
 .bganimation {
@@ -220,23 +180,23 @@ nav #themeBtn:after {
         font-size: 16px;
     }
 
-    nav button {
+    nav a {
         font-size: 16px;
         padding: 8px 15px;
     }
 
-    nav #themeBtn {
+     #themeBtn {
         font-size: 16px;
         padding: 8px 15px;
     }
 }
 
 @media (max-width: 890px) {
-    nav button i {
+    nav a i {
         display: inline;
     }
 
-    nav button span {
+    nav a span {
         display: none;
     }
 
@@ -263,12 +223,12 @@ nav #themeBtn:after {
         font-size: 14px;
     }
 
-    nav button {
+    nav a {
         font-size: 14px;
         padding: 6px 10px;
     }
 
-    nav #themeBtn {
+    #themeBtn {
         font-size: 14px;
         padding: 6px 10px;
     }
