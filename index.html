@@ -12,8 +12,7 @@
     integrity="sha384-ENjdO4Dr2bkBIFxQpeoYz1HIcje39W6bZrZlq7qb7Q1hZLIpP7nU9KJQ1h07HEtN"
     crossorigin="anonymous"
   />
-
-
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link rel="stylesheet" href="text-effect.css" />
   <link rel="stylesheet" href="button.css" />
   <link rel="stylesheet" href="index-styles.css" />
@@ -31,7 +30,7 @@
   <section class="hero container text-center py-5" id="home">
     <img src="yoitsjoejoe.jpg" alt="My Image" class="img-fluid rounded-circle mb-3" style="max-width: 200px;" />
     <h1 class="text">Joseph Emmanuel Magno</h1>
-    <p class="text-warning fs-5">Aspiring IT Professional</p>
+    <p class="text-warning fs-5" data-aos="fade-up">Aspiring IT Professional</p>
   </section>
 
 
@@ -52,6 +51,11 @@
       <i class="fas fa-moon"></i><span class="ms-2">Theme</span>
     </a>
   </nav>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 
 
   <script src="bganimation.js"></script>
