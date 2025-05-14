@@ -33,11 +33,12 @@ body {
 
 .shape {
     position: absolute;
-    animation: popUp 5s ease-in-out;
+    animation: pop 5s ease-in-out;
     pointer-events: none;
 }
 
-@keyframes popUp {
+
+@keyframes pop {
     0% {
         opacity: 0;
         transform: scale(0);
@@ -52,18 +53,20 @@ body {
     }
 }
 
+
 .circle {
-    width: 40px;
-    height: 40px;
+    width: 80px;
+    height: 80px;
     border-radius: 50%;
     background-color: rgba(200, 107, 250, 1);
 }
 
 .square {
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
     background-color: rgba(92, 0, 153, 0.5);
 }
+
 
 .section-container {
     border: 2px solid #FFD700;
@@ -122,6 +125,7 @@ body {
     font-weight: bold;
     color: #FFD700;
 }
+
 
 nav {
     display: flex;
@@ -190,7 +194,11 @@ nav a:hover:after {
     position: relative;
 }
 
-@media (max-width: 820px) {
+@media (max-width: 768px) {
+    .section-container {
+        padding: 15px;
+    }
+
     .section-container h1 {
         font-size: 1.5rem;
     }
@@ -200,96 +208,25 @@ nav a:hover:after {
         height: 60px;
     }
 
-    .image-box span {
-        font-size: 0.9rem;
+    nav a {
+        font-size: 16px;
+        padding: 8px 15px;
     }
-    
+
     #themeBtn {
         font-size: 16px;
         padding: 8px 15px;
     }
-
-    nav a {
-        font-size: 16px;
-        padding: 6px 15px;
-    }
 }
 
-@media (max-width: 795px) {
-    nav a i {
+@media (max-width: 865px) {
+    nav a i,
+    #themeBtn i {
         display: inline;
     }
 
-    nav a span {
+    nav a span,
+    #themeBtn span {
         display: none;
-    }
-    nav #themeBtn i {
-        display: inline;
-    }
-
-    nav #themeBtn span {
-        display: none;
-    }
-}
-
-@media (max-width: 480px) {
-    .section-container {
-        padding: 15px;
-        margin: 10px auto;
-    }
-
-    .section-container h1 {
-        font-size: 1.2rem;
-    }
-
-    .images-container {
-        gap: 10px;
-    }
-
-    .image-box img {
-        width: 50px;
-        height: 50px;
-    }
-
-    .image-box span {
-        font-size: 0.8rem;
-    }
-
-    nav {
-        padding: 10px;
-    }
-
-    nav a {
-        font-size: 14px;
-        padding: 5px 10px;
-    }
-
-    nav #themeBtn {
-        font-size: 16px;
-        padding: 8px 15px;
-    }
-}
-
-@media (max-width: 795px) {
-    .section-container h1 {
-        font-size: 1rem;
-    }
-
-    .image-box img {
-        width: 40px;
-        height: 40px;
-    }
-
-    .image-box span {
-        font-size: 0.7rem;
-    }
-
-    nav  {
-        font-size: 12px;
-        padding: 4px 8px;
-    }
-    nav #themeBtn {
-        font-size: 16px;
-        padding: 8px 15px;
     }
 }
