@@ -101,9 +101,9 @@ body {
 }
 
 .image-box img {
-    width: 80px;
-    height: 80px;
-    border-radius: 15px;
+    width: 65px;
+    height: 65px;
+    border-radius: 12px;
     margin-bottom: 10px;
     transition: box-shadow 0.3s ease;
 }
@@ -113,8 +113,8 @@ body {
 }
 
 .image-box span {
-    font-size: 1rem;
-    font-weight: bold;
+    font-size: 0.9 rem;
+    font-weight: 600;
     color: #FFD700;
 }
 
@@ -191,12 +191,12 @@ nav a:hover:after {
     }
 
     .image-box img {
-        width: 60px;
-        height: 60px;
+        width: 50px;
+        height: 50px;
     }
 
     .image-box span {
-        font-size: 0.9rem;
+        font-size: 0.8rem;
     }
 }
 
