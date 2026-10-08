@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
         shape.style.left = Math.random() * window.innerWidth + "px";
 
         
-        const size = 40 + Math.random() * 40;
+        const size = 24 + Math.random() * 88;
         shape.style.width = size + "px";
         shape.style.height = size + "px";
         shape.style.opacity = Math.random().toFixed(1);
@@ -19,9 +19,9 @@ document.addEventListener("DOMContentLoaded", function () {
         bgContainer.appendChild(shape);
 
         
-        setTimeout(() => shape.remove(), 5000); 
+        setTimeout(() => shape.remove(), 12000);
     }
 
 
-    setInterval(createShape, 600);
+    setInterval(createShape, 1400);
 });

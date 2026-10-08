@@ -8,13 +8,14 @@
         margin: 0;
         font-family: 'Poppins', sans-serif;
         background-size: cover;
-        background-color: #121212;
-        color: white;
+        background-color: var(--page-bg);
+        color: var(--text-primary);
         text-align: center;
         display: flex;
         flex-direction: column;
         min-height: 100vh;
-        overflow: hidden;
+        overflow-x: hidden;
+        overflow-y: auto;
         position: relative;
     }
 
@@ -52,7 +53,7 @@
 
     .hero p {
         font-size: 24px;
-        color: #FFD700;
+        color: var(--accent-secondary);
     }
 
     nav {
@@ -63,14 +64,14 @@
         position: fixed;
         bottom: 0;
         width: 100%;
-        background-color: rgba(0, 0, 0, 0.7);
+        background-color: var(--nav-bg);
         z-index: 2;
         height: 60px;
     }
 
     nav a {
         font-size: 18px;
-        color: #e1e1e1;
+        color: var(--text-primary);
         font-family: inherit;
         font-weight: 800;
         cursor: pointer;
@@ -85,7 +86,7 @@
     }
 
     nav a:hover {
-        color: #C86BFA;
+        color: var(--accent-primary);
     }
 
     nav a:after {
@@ -96,7 +97,7 @@
         position: absolute;
         width: 0%;
         height: 2px;
-        background-color: #3D0066;
+        background-color: var(--accent-hover);
         transition: width 400ms, left 400ms;
     }
 
@@ -107,7 +108,7 @@
 
     #themeBtn {
         font-size: 18px;
-        color: #e1e1e1;
+        color: var(--text-primary);
         font-family: inherit;
         font-weight: 800;
         cursor: pointer;
@@ -133,7 +134,7 @@
 
     .shape {
         position: absolute;
-        animation: pop 5s ease-in-out;
+        animation: pop 12s ease-in-out;
         pointer-events: none;
     }
 
@@ -156,13 +157,13 @@
         width: 80px;
         height: 80px;
         border-radius: 50%;
-        background-color: rgba(200, 107, 250, 1);
+        background-color: var(--decoration-primary);
     }
 
     .square {
         width: 40px;
         height: 40px;
-        background-color: rgba(92, 0, 153, 0.5);
+        background-color: var(--decoration-secondary);
     }
 
 

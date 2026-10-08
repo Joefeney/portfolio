@@ -7,8 +7,8 @@
 body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
-    background-color: #121212;
-    color: white;
+    background-color: var(--page-bg);
+    color: var(--text-primary);
     text-align: center;
     overflow: auto;
     display: flex;
@@ -29,7 +29,7 @@ body {
 
 .shape {
     position: absolute;
-    animation: pop 5s ease-in-out;
+    animation: pop 12s ease-in-out;
     pointer-events: none;
 }
 
@@ -54,13 +54,13 @@ body {
     width: 80px;
     height: 80px;
     border-radius: 50%;
-    background-color: rgba(200, 107, 250, 1);
+    background-color: var(--decoration-primary);
 }
 
 .square {
     width: 50px;
     height: 50px;
-    background-color: rgba(92, 0, 153, 0.5);
+    background-color: var(--decoration-secondary);
 }
 
 
@@ -88,7 +88,7 @@ body {
 
 .hero p {
     font-size: 24px;
-    color: #FFD700;
+    color: var(--accent-secondary);
 }
 
 
@@ -100,14 +100,14 @@ nav {
     position: fixed;
     bottom: 0;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: var(--nav-bg);
     z-index: 2;
     height: 60px;
 }
 
 nav a {
     font-size: 18px;
-    color: #e1e1e1;
+    color: var(--text-primary);
     font-family: inherit;
     font-weight: 800;
     cursor: pointer;
@@ -122,7 +122,7 @@ nav a {
 }
 
 nav a:hover {
-    color: #C86BFA;
+    color: var(--accent-primary);
 }
 
 nav a:after {
@@ -133,7 +133,7 @@ nav a:after {
     position: absolute;
     width: 0%;
     height: 2px;
-    background-color: #3D0066;
+    background-color: var(--accent-hover);
     transition: width 400ms, left 400ms;
 }
 
@@ -145,7 +145,7 @@ nav a:hover:after {
 
 #themeBtn {
     font-size: 18px;
-    color: #e1e1e1;
+    color: var(--text-primary);
     font-family: inherit;
     font-weight: 800;
     cursor: pointer;
@@ -167,8 +167,8 @@ nav a:hover:after {
     margin-top: 100px;
     padding: 20px;
     border-radius: 15px;
-    border: 2px solid #FFD700;
-    background-color: rgba(18, 18, 18, 0.9);
+    border: 2px solid var(--border-color);
+    background-color: var(--surface-bg);
     z-index: 1;
     position: relative;
     overflow: auto;

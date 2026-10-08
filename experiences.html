@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Joseph Magno - Experience Timeline</title>
     <link rel="stylesheet" href="css/experiences-styles.css">
+    <link rel="stylesheet" href="css/theme-switcher.css">
     <link rel="stylesheet" href="css/bganimation.css">
     <link rel="stylesheet" href="css/text-effect.css">
     <link rel="stylesheet" href="css/button.css">
@@ -71,16 +72,22 @@
         <button onclick="location.href='contacts.html'"><i class="fas fa-envelope"></i><span>Contact</span></button>
         
         
-        <select id="theme-selector">
-            <option value="dark">Dark</option>
-            <option value="light">Light</option>
-            <option value="navy">Navy</option>
-            <option value="dustygold">Dusty Gold</option>
-            <option value="teal">Teal</option>
-            <option value="maroon">Maroon</option>
-        </select>
+        <div class="theme-dropdown">
+      <button class="theme-trigger" type="button" aria-haspopup="menu" aria-expanded="false" aria-label="Choose theme">
+        <i class="fas fa-moon" id="theme-icon" aria-hidden="true"></i>
+        <span id="theme-label">Dark</span>
+        <i class="fas fa-chevron-up theme-caret" aria-hidden="true"></i>
+      </button>
+      <div class="theme-menu" role="menu" aria-label="Choose theme" hidden>
+        <button type="button" role="menuitemradio" aria-checked="true" data-theme="dark">Dark</button>
+        <button type="button" role="menuitemradio" aria-checked="false" data-theme="light">Light</button>
+        <button type="button" role="menuitemradio" aria-checked="false" data-theme="teal">Teal</button>
+        <button type="button" role="menuitemradio" aria-checked="false" data-theme="forest">Forest</button>
+      </div>
+    </div>
     </nav>
 
+    <script src="js/scroll-control.js"></script>
     <script src="js/theme-switcher.js"></script>
 </body>
 </html>

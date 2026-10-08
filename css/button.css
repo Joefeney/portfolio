@@ -1,6 +1,6 @@
 button {
   font-size: 18px;
-  color: #e1e1e1;
+  color: var(--text-primary);
   font-family: inherit;
   font-weight: 800;
   cursor: pointer;
@@ -13,19 +13,24 @@ button {
 }
 
 button:hover {
-  color: #C86BFA;
+  color: var(--accent-primary);
 }
 
 button:focus {
-  color: #C86BFA;
-  text-shadow: 0 0 5px #C86BFA, 0 0 10px #C86BFA;
+  color: var(--accent-primary);
+  text-shadow: 0 0 5px var(--accent-primary), 0 0 10px var(--accent-primary);
+}
+
+button:focus-visible {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 3px;
 }
 
 button.active {
-  color: #C86BFA;
-  text-shadow: 0 0 5px #C86BFA, 0 0 10px #C86BFA;
+  color: var(--accent-primary);
+  text-shadow: 0 0 5px var(--accent-primary), 0 0 10px var(--accent-primary);
 }
 
 button.active:focus {
-  outline: none; 
+  outline: 2px solid var(--focus-ring);
 }

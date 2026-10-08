@@ -3,7 +3,7 @@
 .text {
     font-family: "Dangrek", serif;
     font-size: 30px;
-    background: linear-gradient(45deg, #3d0066, #5c0099, #c86bfa, #fdc500, #ffd500, #ffee32, #03071e);
+    background: var(--title-gradient);
     background-clip: text;
     color: transparent;
     background-size: 400% 400%;

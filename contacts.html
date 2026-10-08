@@ -12,7 +12,8 @@
 
   <link rel="stylesheet" href="css/button.css">
   <link rel="stylesheet" href="css/text-effect.css">
-  <link rel="stylesheet" href="css/contacts-style.css">
+<link rel="stylesheet" href="css/contacts-style.css">
+<link rel="stylesheet" href="css/theme-switcher.css">
   
 
   <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
@@ -55,12 +56,22 @@
     <a href="tech-stack.html" class="btn text-white" data-bs-toggle="tooltip" title="Explore my tech skills">
       <i class="fas fa-code"></i><span class="ms-2">Tech Stack</span>
     </a>
-    <a href="contacts.html" class="btn text-white" data-bs-toggle="tooltip" title="Contact me">
+    <a href="contacts.html" class="btn text-white" aria-current="page" data-bs-toggle="tooltip" title="Contact me">
       <i class="fas fa-envelope"></i><span class="ms-2">Contact</span>
     </a>
-    <a href="#theme" id="themeBtn" class="btn text-white anchor-btn" data-bs-toggle="tooltip" title="Change Theme">
-      <i class="fas fa-moon"></i><span class="ms-2">Theme</span>
-    </a>
+    <div class="theme-dropdown">
+      <button class="theme-trigger" type="button" aria-haspopup="menu" aria-expanded="false" aria-label="Choose theme">
+        <i class="fas fa-moon" id="theme-icon" aria-hidden="true"></i>
+        <span id="theme-label">Dark</span>
+        <i class="fas fa-chevron-up theme-caret" aria-hidden="true"></i>
+      </button>
+      <div class="theme-menu" role="menu" aria-label="Choose theme" hidden>
+        <button type="button" role="menuitemradio" aria-checked="true" data-theme="dark">Dark</button>
+        <button type="button" role="menuitemradio" aria-checked="false" data-theme="light">Light</button>
+        <button type="button" role="menuitemradio" aria-checked="false" data-theme="teal">Teal</button>
+        <button type="button" role="menuitemradio" aria-checked="false" data-theme="forest">Forest</button>
+      </div>
+    </div>
   </nav>
 
 
@@ -80,6 +91,7 @@
   </script>
 
   <script src="js/bganimation.js"></script>
+  <script src="js/scroll-control.js"></script>
   <script src="js/theme-switcher.js"></script>
   <script src="js/oneko.js"></script>
 </body>
