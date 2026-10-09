@@ -27,18 +27,20 @@ header h1 {
     width: min(92%, 1200px);
     margin: 18px auto 0;
     position: relative;
-    z-index: 1;
+    z-index: 2;
 }
 
 .academic-page-actions a {
     display: inline-flex;
+    position: relative;
+    z-index: 1;
     align-items: center;
     justify-content: center;
     gap: 9px;
     padding: 9px 16px;
     border: 1px solid var(--accent-primary);
     border-radius: 12px;
-    background: var(--timeline-surface);
+    background-color: var(--timeline-surface);
     color: var(--accent-primary);
     font-weight: 600;
     text-decoration: none;
@@ -47,6 +49,7 @@ header h1 {
 
 .academic-page-actions a:hover {
     border-color: var(--accent-primary);
+    background-color: var(--timeline-surface);
     box-shadow: 0 0 12px var(--glow-primary);
     color: var(--accent-primary);
     transform: translateY(-1px);

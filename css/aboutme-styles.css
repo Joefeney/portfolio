@@ -203,9 +203,9 @@ nav a:hover:after {
     justify-content: center;
     gap: 10px;
     padding: 12px 18px;
-    border: 1px solid rgba(var(--accent-primary-rgb), 0.5);
+    border: 1px solid var(--accent-primary);
     border-radius: 12px;
-    background: var(--accent-soft);
+    background: var(--timeline-surface);
     color: var(--accent-primary);
     font-size: 0.95rem;
     font-weight: 600;
@@ -215,7 +215,7 @@ nav a:hover:after {
 
 .about-section-links a:hover {
     border-color: var(--accent-primary);
-    background: var(--accent-soft);
+    background: var(--timeline-surface);
     color: var(--accent-primary);
     box-shadow: 0 0 12px var(--glow-primary);
 }

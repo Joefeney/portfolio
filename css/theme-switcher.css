@@ -303,6 +303,7 @@ nav > button:focus-visible {
     font-family: inherit;
     font-size: 18px;
     font-weight: 800;
+    text-shadow: none;
     cursor: pointer;
     transition: color 200ms ease, background-color 200ms ease, border-color 200ms ease;
 }
@@ -315,7 +316,13 @@ nav > button:focus-visible {
     content: none;
 }
 
-.theme-trigger:hover,
+.theme-trigger:hover {
+    border-color: transparent;
+    background: transparent;
+    color: var(--accent-primary);
+    text-shadow: 0 0 8px var(--glow-primary);
+}
+
 .theme-trigger:focus-visible,
 .theme-dropdown.is-open .theme-trigger {
     border-color: rgba(var(--accent-primary-rgb), 0.55);
@@ -326,6 +333,10 @@ nav > button:focus-visible {
 .theme-trigger:focus-visible {
     outline: 2px solid var(--focus-ring);
     outline-offset: 2px;
+}
+
+.theme-dropdown button:focus {
+    text-shadow: none;
 }
 
 .theme-trigger .theme-caret {
