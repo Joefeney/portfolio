@@ -23,5 +23,5 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
 
-    setInterval(createShape, 1400);
+    setInterval(createShape, 800);
 });

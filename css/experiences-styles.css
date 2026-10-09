@@ -5,31 +5,71 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
     background-color: var(--page-bg);
     margin: 0;
     padding: 0;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: flex-start;
     align-items: center;
     min-height: 100vh;
     color: var(--text-primary);
+    position: relative;
+    overflow-x: hidden;
+}
+
+.bganimation {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.shape {
+    position: absolute;
+    pointer-events: none;
+    animation: pop 12s ease-in-out;
+}
+
+.shape.circle {
+    border-radius: 50%;
+    background-color: var(--decoration-primary);
+}
+
+.shape.square {
+    background-color: var(--decoration-secondary);
+}
+
+#oneko {
+    z-index: 0;
+    pointer-events: none;
+}
+
+@keyframes pop {
+    0%, 100% {
+        opacity: 0;
+        transform: scale(0);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1);
+    }
 }
 
 header {
-    position: fixed;
-    top: 0;
-    left: 0;
+    position: relative;
     width: 100%;
     text-align: center;
-    background-color: var(--header-bg);
-    padding: 15px 0;
-    z-index: 2;
-    box-shadow: 0 4px 10px var(--shadow-color);
+    background: transparent;
+    padding: 28px 16px 0;
+    z-index: 1;
 }
 
 header h1 {
-    font-size: 2rem;
+    font-size: clamp(1.7rem, 3vw, 2.25rem);
     margin: 0;
 }
 
@@ -114,7 +154,8 @@ header h1 {
     color: var(--timeline-heading);
 }
 
-.timeline-content h2 {
+.timeline-content h2,
+.timeline-content h3 {
     margin: 10px 0;
     color: var(--timeline-heading);
 }
@@ -124,7 +165,125 @@ header h1 {
     color: var(--timeline-muted);
 }
 
-nav {
+.project-container {
+    width: min(94%, 900px);
+    max-width: 900px;
+    margin: 28px auto 100px;
+    padding: 34px 28px 28px;
+    border: 1px solid var(--border-color);
+    border-radius: 18px;
+    background: var(--surface-bg);
+    box-shadow: 0 12px 32px var(--shadow-color);
+    position: relative;
+    z-index: 1;
+}
+
+.project-container > h2 {
+    margin: 0 0 18px;
+    color: var(--accent-primary);
+    font-size: 1.35rem;
+}
+
+.project-card {
+    padding: 22px;
+    border: 1px solid var(--border-color);
+    border-radius: 14px;
+    background: var(--timeline-surface);
+    text-align: left;
+    box-shadow: 0 4px 14px var(--shadow-soft);
+    transition: box-shadow 180ms ease, transform 180ms ease;
+}
+
+.project-card:hover {
+    box-shadow: 0 10px 24px var(--shadow-color), 0 0 14px var(--glow-primary);
+    transform: translateY(-3px);
+}
+
+.project-card-heading {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.project-icon {
+    display: inline-grid;
+    flex: 0 0 38px;
+    width: 38px;
+    height: 38px;
+    place-items: center;
+    border-radius: 12px;
+    background: var(--accent-soft);
+    color: var(--accent-primary);
+}
+
+.project-eyebrow {
+    margin: 0 0 4px;
+    color: var(--text-secondary);
+    font-size: 0.78rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
+.project-card h3 {
+    margin: 0;
+    color: var(--timeline-heading);
+    font-size: 1.2rem;
+}
+
+.project-card .project-copy {
+    margin: 12px 0 0;
+    color: var(--timeline-muted);
+    line-height: 1.6;
+    overflow-wrap: anywhere;
+}
+
+.project-live-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 16px;
+    padding: 8px 12px;
+    border: 1px solid rgba(var(--accent-primary-rgb), 0.5);
+    border-radius: 10px;
+    background: var(--accent-soft);
+    color: var(--accent-primary);
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: border-color 160ms ease, box-shadow 160ms ease;
+}
+
+.project-live-link:hover {
+    border-color: var(--accent-primary);
+    color: var(--accent-primary);
+    box-shadow: 0 0 12px var(--glow-primary);
+}
+
+.project-live-link:focus-visible {
+    outline: 2px solid var(--focus-ring);
+    outline-offset: 3px;
+}
+
+.project-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+    margin: 16px 0 0;
+    padding: 0;
+    list-style: none;
+}
+
+.project-tech li {
+    padding: 4px 9px;
+    border: 1px solid var(--border-color);
+    border-radius: 999px;
+    background: var(--accent-soft);
+    color: var(--text-primary);
+    font-size: 0.75rem;
+    line-height: 1.4;
+}
+
+nav:not(.navbar) {
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -137,7 +296,7 @@ nav {
     height: 60px;
 }
 
-nav button {
+nav:not(.navbar) button {
     font-size: 18px;
     color: var(--text-primary);
     font-family: inherit;
@@ -158,27 +317,27 @@ nav button {
     justify-content: center;
 }
 
-nav button i {
+nav:not(.navbar) button i {
     font-size: 24px;
     display: none;
 }
 
-nav button span {
+nav:not(.navbar) button span {
     display: inline;
 }
 
-nav button:focus,
-nav button:hover {
+nav:not(.navbar) button:focus,
+nav:not(.navbar) button:hover {
     color: var(--accent-primary);
 }
 
-nav button:focus:after,
-nav button:hover:after {
+nav:not(.navbar) button:focus:after,
+nav:not(.navbar) button:hover:after {
     width: 100%;
     left: 0%;
 }
 
-nav button:after {
+nav:not(.navbar) button:after {
     content: "";
     pointer-events: none;
     bottom: -2px;
@@ -220,18 +379,18 @@ nav button:after {
         font-size: 1.5rem;
     }
 
-    nav button {
+    nav:not(.navbar) button {
         font-size: 16px;
         padding: 8px 15px;
     }
 }
 
 @media (max-width: 695px) {
-    nav button i {
+    nav:not(.navbar) button i {
         display: inline;
     }
 
-    nav button span {
+    nav:not(.navbar) button span {
         display: none;
     }
 }
@@ -253,11 +412,23 @@ nav button:after {
         font-size: 1rem;
     }
 
+    .timeline-content h3 {
+        font-size: 0.95rem;
+    }
+
     .timeline-content p {
         font-size: 0.9rem;
     }
 
-    nav button {
+    .project-container {
+        padding: 20px 16px;
+    }
+
+    .project-card {
+        padding: 18px 15px;
+    }
+
+    nav:not(.navbar) button {
         font-size: 14px;
         padding: 6px 10px;
     }

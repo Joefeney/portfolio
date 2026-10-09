@@ -154,6 +154,12 @@ body[data-theme="forest"] {
 body {
     background-color: var(--page-bg);
     color: var(--text-primary);
+    padding-bottom: calc(60px + env(safe-area-inset-bottom));
+}
+
+#oneko {
+    z-index: 0;
+    pointer-events: none;
 }
 
 body .hero .text-warning {
@@ -162,6 +168,40 @@ body .hero .text-warning {
 
 nav.navbar {
     background-color: var(--nav-bg) !important;
+}
+
+nav.navbar.fixed-bottom {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: calc(60px + env(safe-area-inset-bottom));
+    padding: 8px 16px calc(8px + env(safe-area-inset-bottom)) !important;
+    z-index: 1100 !important;
+}
+
+nav.navbar.fixed-bottom a.btn {
+    display: flex;
+    flex: 1 1 0;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px 20px;
+    border-radius: 12px;
+    font-family: inherit;
+    font-size: 18px;
+    font-weight: 800;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+nav.navbar.fixed-bottom a.btn i {
+    font-size: 24px;
 }
 
 nav.navbar a.btn {
@@ -199,6 +239,46 @@ nav button[aria-current="page"] {
     background: var(--accent-soft);
     box-shadow: 0 0 16px var(--glow-primary);
     color: var(--accent-primary) !important;
+}
+
+nav.navbar a.btn,
+nav > button {
+    flex: 0 0 auto;
+    padding: 10px 20px;
+    border: 1px solid transparent;
+    border-radius: 12px;
+    transition: color 180ms ease, background-color 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
+}
+
+nav.navbar > .theme-dropdown,
+nav > .theme-dropdown {
+    flex: 0 0 auto;
+}
+
+@media (max-width: 865px) {
+    nav.navbar.fixed-bottom a.btn i {
+        display: inline;
+    }
+
+    nav.navbar.fixed-bottom a.btn span {
+        display: none;
+    }
+}
+
+nav.navbar a.btn::after,
+nav > button::after {
+    content: none !important;
+}
+
+nav.navbar a.btn:hover:not([aria-current="page"]),
+nav.navbar a.btn:focus-visible:not([aria-current="page"]),
+nav > button:hover,
+nav > button:focus-visible {
+    border-color: transparent;
+    background: transparent;
+    box-shadow: none;
+    color: var(--accent-primary) !important;
+    text-shadow: 0 0 8px var(--glow-primary);
 }
 
 .theme-dropdown {
@@ -306,6 +386,11 @@ nav button[aria-current="page"] {
 }
 
 @media (max-width: 480px) {
+    nav.navbar a.btn,
+    nav > button {
+        padding: 6px 10px;
+    }
+
     .theme-trigger {
         gap: 5px;
         padding: 6px 4px;
@@ -314,5 +399,28 @@ nav button[aria-current="page"] {
 
     .theme-menu {
         min-width: 145px;
+    }
+
+    nav.navbar.fixed-bottom a.btn {
+        min-width: 0;
+        padding: 8px 4px;
+        font-size: 14px;
+    }
+
+    nav.navbar.fixed-bottom a.btn i {
+        font-size: 20px;
+    }
+
+    nav.navbar.fixed-bottom .theme-dropdown {
+        flex: 0 0 72px;
+        width: 72px;
+    }
+
+    nav.navbar.fixed-bottom .theme-trigger {
+        width: 100%;
+        gap: 4px;
+        padding: 6px 3px;
+        font-size: 12px;
+        white-space: nowrap;
     }
 }

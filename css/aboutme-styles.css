@@ -181,6 +181,50 @@ nav a:hover:after {
     line-height: 1.6;
 }
 
+.about-section-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    width: 90%;
+    max-width: 600px;
+    margin: 70px auto 0;
+    position: relative;
+    z-index: 1;
+}
+
+.about-section-links + .about-me {
+    margin-top: 24px;
+}
+
+.about-section-links a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 12px 18px;
+    border: 1px solid rgba(var(--accent-primary-rgb), 0.5);
+    border-radius: 12px;
+    background: var(--accent-soft);
+    color: var(--accent-primary);
+    font-size: 0.95rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background-color 160ms ease, border-color 160ms ease, box-shadow 160ms ease;
+}
+
+.about-section-links a:hover {
+    border-color: var(--accent-primary);
+    background: var(--accent-soft);
+    color: var(--accent-primary);
+    box-shadow: 0 0 12px var(--glow-primary);
+}
+
+.about-section-links a:focus-visible {
+    outline: 2px solid var(--focus-ring);
+    outline-offset: 3px;
+}
+
 
 @media (max-width: 768px) {
     .hero img {

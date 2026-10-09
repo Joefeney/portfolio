@@ -3,8 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Joseph Magno - Experience Timeline</title>
+    <title>Joseph Emmanuel A. Magno | Projects</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/experiences-styles.css">
+    <link rel="stylesheet" href="css/academic-background-styles.css">
     <link rel="stylesheet" href="css/theme-switcher.css">
     <link rel="stylesheet" href="css/bganimation.css">
     <link rel="stylesheet" href="css/text-effect.css">
@@ -12,66 +15,67 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <div class="bganimation">
-        <div class="shape circle"></div>
-        <div class="shape circle"></div>
-        <div class="shape circle"></div>
-        <div class="shape circle"></div>
-        <div class="shape circle"></div>
-        
-        <div class="shape square"></div>
-        <div class="shape square"></div>
-        <div class="shape square"></div>
-        <div class="shape square"></div>
-        <div class="shape square"></div>
-    </div>
+    <div class="bganimation" aria-hidden="true"></div>
 
     <header>
-        <h1 class="text">Academic Experience</h1>
+        <h1 class="text">Projects</h1>
     </header>
 
-    <div class="timeline-container">
-        <div class="timeline">
-            <div class="timeline-item">
-                <div class="timeline-content">
-                    <h1>College</h1>
-                    <h2>Bachelor of Science in Information and Technology</h2>
-                    <p>St. Dominic College of Asia</p>
-                    <p>2022 - Present</p>
-                </div>
-            </div>
-            <div class="timeline-item">
-                <div class="timeline-content">
-                    <h1>Senior Highschool</h1>
-                    <h2>STEM</h2>
-                    <p>Perpetual Help System Dalta Molino Campus</p>
-                    <p>Graduated: 2022</p>
-                </div>
-            </div>
-            <div class="timeline-item">
-                <div class="timeline-content">
-                    <h1>Junior Highschool</h1>
-                    <p>Wanyesville Learning Center.inc</p>
-                    <p>Graduated: 2020</p>
-                </div>
-            </div>
-            <div class="timeline-item">
-                <div class="timeline-content">
-                    <h1>Elementary School</h1>
-                    <p>Dulong Bayan Elementary School</p>
-                    <p>Graduated: 2015</p>
-                </div>
-            </div>
-        </div>
+    <div class="academic-page-actions" role="group" aria-label="Experience page links">
+        <a href="academic-background.html">
+            <i class="fas fa-graduation-cap" aria-hidden="true"></i>
+            <span>Academic Background</span>
+        </a>
+        <a href="certificates.html">
+            <i class="fas fa-certificate" aria-hidden="true"></i>
+            <span>Certificates</span>
+        </a>
+        <a href="about-me.html">
+            <i class="fas fa-arrow-left" aria-hidden="true"></i>
+            <span>Back to About Me</span>
+        </a>
     </div>
 
-    <nav>
-        <button onclick="location.href='index.html'"><i class="fas fa-home"></i><span>Home</span></button>
-        <button onclick="location.href='about-me.html'"><i class="fas fa-user"></i><span>About Me</span></button>
-        <button onclick="location.href='tech-stack.html'"><i class="fas fa-code"></i><span>Tech Stack</span></button>
-        <button onclick="location.href='contacts.html'"><i class="fas fa-envelope"></i><span>Contact</span></button>
-        
-        
+    <section class="project-container" aria-labelledby="projects-heading">
+        <h2 id="projects-heading">Capstone Project Experience</h2>
+        <article class="project-card">
+            <div class="project-card-heading">
+                <span class="project-icon" aria-hidden="true"><i class="fas fa-laptop-code"></i></span>
+                <div>
+                    <p class="project-eyebrow">Capstone project</p>
+                    <h3>e-RoomReserve</h3>
+                </div>
+            </div>
+            <p class="project-copy">A room reservation web app with Firebase Authentication and Firestore, plus reservation document uploads using Supabase Storage.</p>
+            <p class="project-copy">The app also includes Next.js API routes, PDF and Excel exports, VADER-based sentiment analysis, and Bluetooth Low Energy (BLE) room-status features.</p>
+            <a class="project-live-link" href="https://eroomreserve.vercel.app/" target="_blank" rel="noopener noreferrer">
+                View Live Application <i class="fas fa-external-link-alt" aria-hidden="true"></i>
+            </a>
+            <ul class="project-tech" aria-label="Project technologies">
+                <li>Next.js</li>
+                <li>React</li>
+                <li>TypeScript</li>
+                <li>Tailwind CSS</li>
+                <li>Firebase</li>
+                <li>Supabase Storage</li>
+                <li>Bluetooth Low Energy (BLE)</li>
+            </ul>
+        </article>
+    </section>
+
+    <nav class="navbar fixed-bottom bg-dark bg-opacity-75 d-flex justify-content-around p-2 z-2">
+        <a href="index.html" class="btn text-white" title="Go to Home">
+            <i class="fas fa-home"></i><span class="ms-2">Home</span>
+        </a>
+        <a href="about-me.html" class="btn text-white" aria-current="page" title="Learn more about me">
+            <i class="fas fa-user"></i><span class="ms-2">About Me</span>
+        </a>
+        <a href="tech-stack.html" class="btn text-white" title="Explore my tech skills">
+            <i class="fas fa-code"></i><span class="ms-2">Tech Stack</span>
+        </a>
+        <a href="contacts.html" class="btn text-white" title="Contact me">
+            <i class="fas fa-envelope"></i><span class="ms-2">Contact</span>
+        </a>
         <div class="theme-dropdown">
       <button class="theme-trigger" type="button" aria-haspopup="menu" aria-expanded="false" aria-label="Choose theme">
         <i class="fas fa-moon" id="theme-icon" aria-hidden="true"></i>
@@ -89,5 +93,7 @@
 
     <script src="js/scroll-control.js"></script>
     <script src="js/theme-switcher.js"></script>
+    <script src="js/bganimation.js"></script>
+    <script src="js/oneko.js"></script>
 </body>
 </html>
