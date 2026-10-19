@@ -1,3 +1,8 @@
+.bganimation {
+    position: fixed;
+    inset: 0;
+}
+
 .certificates-container {
     width: min(92%, 900px);
     margin: 28px auto 100px;
@@ -142,6 +147,8 @@ body.certificate-viewer-open {
 }
 
 .course-document-link {
+    display: inline-block;
+    margin-top: 14px;
     color: var(--accent-primary);
     text-underline-offset: 3px;
 }
