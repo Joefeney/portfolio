@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Joseph Emmanuel A. Magno | Certificates</title>
+    <title>Joseph Emmanuel A. Magno | Certificates and Courses</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-ENjdO4Dr2bkBIFxQpeoYz1HIcje39b6ZrZlq7qb7Q1hZLIpP7nU9KJQ1h07HEtN" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
@@ -20,7 +20,7 @@
     <div class="bganimation" aria-hidden="true"></div>
 
     <header>
-        <h1 class="text">Certificates</h1>
+        <h1 class="text">Certificates &amp; Courses</h1>
     </header>
 
     <div class="academic-page-actions" role="group" aria-label="Certificate page links">
@@ -38,38 +38,124 @@
         </a>
     </div>
 
-    <main class="certificates-container" aria-label="Professional certificates">
-        <div class="certificates-grid">
-            <article class="certificate-card">
-                <button class="certificate-preview" type="button" data-certificate-src="assets/certificates/html-and-css-preview.png" aria-label="View the full HTML and CSS certificate">
-                    <img src="assets/certificates/html-and-css-preview.png" alt="Preview of the HTML and CSS Information Technology Specialist certificate">
-                    <span class="certificate-preview-action"><i class="fas fa-expand-alt" aria-hidden="true"></i> View full certificate</span>
-                </button>
-                <div class="certificate-details">
-                    <p class="certificate-eyebrow">Information Technology Specialist</p>
-                    <h2>HTML and CSS</h2>
-                    <dl>
-                        <div><dt>Issuer</dt><dd>Certiport / Pearson</dd></div>
-                        <div><dt>Date awarded</dt><dd><time datetime="2026-02-04">February 4, 2026</time></dd></div>
-                    </dl>
-                </div>
-            </article>
-
-            <article class="certificate-card">
-                <button class="certificate-preview" type="button" data-certificate-src="assets/certificates/cybersecurity-preview.png" aria-label="View the full Cybersecurity certificate">
-                    <img src="assets/certificates/cybersecurity-preview.png" alt="Preview of the Cybersecurity Information Technology Specialist certificate">
-                    <span class="certificate-preview-action"><i class="fas fa-expand-alt" aria-hidden="true"></i> View full certificate</span>
-                </button>
-                <div class="certificate-details">
-                    <p class="certificate-eyebrow">Information Technology Specialist</p>
-                    <h2>Cybersecurity</h2>
-                    <dl>
-                        <div><dt>Issuer</dt><dd>Certiport / Pearson</dd></div>
-                        <div><dt>Date awarded</dt><dd><time datetime="2026-06-03">June 3, 2026</time></dd></div>
-                    </dl>
-                </div>
-            </article>
+    <main class="certificates-container" aria-label="Certificates and course completions">
+        <div class="credential-filters" role="group" aria-label="Filter credentials">
+            <button type="button" class="credential-filter is-active" data-credential-filter="all" aria-pressed="true">All</button>
+            <button type="button" class="credential-filter" data-credential-filter="certificates" aria-pressed="false">Certificates</button>
+            <button type="button" class="credential-filter" data-credential-filter="achievements" aria-pressed="false">Achievements</button>
+            <button type="button" class="credential-filter" data-credential-filter="badges" aria-pressed="false">Badges</button>
         </div>
+
+        <section class="credential-group" data-credential-group="certificates" aria-labelledby="certifications-heading">
+            <h2 class="credential-section-heading" id="certifications-heading">Certifications</h2>
+            <div class="certificates-grid">
+                <article class="certificate-card">
+                    <button class="certificate-preview" type="button" data-certificate-src="assets/certificates/html-and-css-preview.png" aria-label="View the full HTML and CSS certificate">
+                        <img src="assets/certificates/html-and-css-preview.png" alt="Preview of the HTML and CSS Information Technology Specialist certificate">
+                        <span class="certificate-preview-action"><i class="fas fa-expand-alt" aria-hidden="true"></i> View full certificate</span>
+                    </button>
+                    <div class="certificate-details">
+                        <p class="certificate-eyebrow">Information Technology Specialist</p>
+                        <h2>HTML and CSS</h2>
+                        <dl>
+                            <div><dt>Issuer</dt><dd>Certiport / Pearson</dd></div>
+                            <div><dt>Date awarded</dt><dd><time datetime="2026-02-04">February 4, 2026</time></dd></div>
+                        </dl>
+                    </div>
+                </article>
+
+                <article class="certificate-card">
+                    <button class="certificate-preview" type="button" data-certificate-src="assets/certificates/cybersecurity-preview.png" aria-label="View the full Cybersecurity certificate">
+                        <img src="assets/certificates/cybersecurity-preview.png" alt="Preview of the Cybersecurity Information Technology Specialist certificate">
+                        <span class="certificate-preview-action"><i class="fas fa-expand-alt" aria-hidden="true"></i> View full certificate</span>
+                    </button>
+                    <div class="certificate-details">
+                        <p class="certificate-eyebrow">Information Technology Specialist</p>
+                        <h2>Cybersecurity</h2>
+                        <dl>
+                            <div><dt>Issuer</dt><dd>Certiport / Pearson</dd></div>
+                            <div><dt>Date awarded</dt><dd><time datetime="2026-06-03">June 3, 2026</time></dd></div>
+                        </dl>
+                    </div>
+                </article>
+            </div>
+
+            <section class="course-completions" aria-labelledby="course-certificates-heading">
+                <div class="course-section-intro">
+                    <p class="certificate-eyebrow">Course completion certificates</p>
+                    <h2 class="credential-section-heading" id="course-certificates-heading">Completed Courses</h2>
+                </div>
+                <div class="course-grid">
+                    <article class="course-card">
+                        <p class="certificate-eyebrow">Cisco Networking Academy</p>
+                        <h3>Getting Started with Cisco Packet Tracer</h3>
+                        <dl class="course-details-list">
+                            <div><dt>Provider</dt><dd>St. Dominic College of Asia through Cisco Networking Academy</dd></div>
+                            <div><dt>Completed</dt><dd><time datetime="2026-02-05">February 5, 2026</time></dd></div>
+                        </dl>
+                        <a class="course-document-link" href="assets/certificates/netacad-cisco-packet-tracer-2026.pdf" target="_blank" rel="noopener noreferrer">View course certificate (PDF)</a>
+                    </article>
+                    <article class="course-card">
+                        <p class="certificate-eyebrow">Cisco Networking Academy</p>
+                        <h3>Introduction to IoT and Digital Transformation</h3>
+                        <dl class="course-details-list">
+                            <div><dt>Provider</dt><dd>St. Dominic College of Asia through Cisco Networking Academy</dd></div>
+                            <div><dt>Completed</dt><dd><time datetime="2026-02-13">February 13, 2026</time></dd></div>
+                        </dl>
+                        <a class="course-document-link" href="assets/certificates/netacad-introduction-to-iot-2026.pdf" target="_blank" rel="noopener noreferrer">View course certificate (PDF)</a>
+                    </article>
+                    <article class="course-card">
+                        <p class="certificate-eyebrow">Cisco Networking Academy</p>
+                        <h3>Introduction to Cybersecurity</h3>
+                        <dl class="course-details-list">
+                            <div><dt>Provider</dt><dd>Networking Academy</dd></div>
+                            <div><dt>Completed</dt><dd><time datetime="2026-05-21">May 21, 2026</time></dd></div>
+                        </dl>
+                        <a class="course-document-link" href="assets/certificates/netacad-introduction-to-cybersecurity-2026.pdf" target="_blank" rel="noopener noreferrer">View course certificate (PDF)</a>
+                    </article>
+                </div>
+            </section>
+        </section>
+
+        <section class="credential-group" data-credential-group="achievements" aria-labelledby="achievements-heading">
+            <p class="certificate-eyebrow">Course milestones</p>
+            <h2 class="credential-section-heading" id="achievements-heading">Achievements</h2>
+            <p class="course-section-intro">These achievement badges were earned while completing the courses listed in the Certificates filter.</p>
+            <div class="achievement-grid">
+                <article class="achievement-card"><h3>Cybersecurity Administration</h3><p>BSIT3A Introduction to Cybersecurity</p><time datetime="2025-09-04">September 4, 2025</time><a href="assets/certificates/badge-cybersecurity-administration-2025.png" target="_blank" rel="noopener noreferrer">View evidence</a></article>
+                <article class="achievement-card"><h3>Cisco Packet Tracer</h3><p>Getting Started with Cisco Packet Tracer</p><time datetime="2026-02-05">February 5, 2026</time><a href="assets/certificates/badge-cisco-packet-tracer-2026.png" target="_blank" rel="noopener noreferrer">View evidence</a></article>
+                <article class="achievement-card"><h3>Digital Transformation</h3><p>Introduction to IoT and Digital Transformation</p><time datetime="2026-02-10">February 10, 2026</time><a href="assets/certificates/badge-iot-digital-transformation-2026.png" target="_blank" rel="noopener noreferrer">View evidence</a></article>
+                <article class="achievement-card"><h3>Programming Things</h3><p>Introduction to IoT and Digital Transformation</p><time datetime="2026-02-12">February 12, 2026</time><a href="assets/certificates/badge-iot-programming-things-2026.png" target="_blank" rel="noopener noreferrer">View evidence</a></article>
+                <article class="achievement-card"><h3>Data Insights</h3><p>Introduction to IoT and Digital Transformation</p><time datetime="2026-02-13">February 13, 2026</time><a href="assets/certificates/badge-iot-data-insights-2026.png" target="_blank" rel="noopener noreferrer">View evidence</a></article>
+                <article class="achievement-card"><h3>Automating Things</h3><p>Introduction to IoT and Digital Transformation</p><time datetime="2026-02-13">February 13, 2026</time><a href="assets/certificates/badge-iot-automating-things-2026.png" target="_blank" rel="noopener noreferrer">View evidence</a></article>
+                <article class="achievement-card"><h3>IoT Opportunities</h3><p>Introduction to IoT and Digital Transformation</p><time datetime="2026-02-13">February 13, 2026</time><a href="assets/certificates/badge-iot-opportunities-2026.png" target="_blank" rel="noopener noreferrer">View evidence</a></article>
+                <article class="achievement-card"><h3>Cybersecurity Administration</h3><p>Introduction to Cybersecurity</p><time datetime="2026-05-17">May 17, 2026</time><a href="assets/certificates/badge-cybersecurity-administration-2026.png" target="_blank" rel="noopener noreferrer">View evidence</a></article>
+                <article class="achievement-card"><h3>Threat Analysis</h3><p>Introduction to Cybersecurity</p><time datetime="2026-05-21">May 21, 2026</time><a href="assets/certificates/badge-cybersecurity-threat-analysis-2026.png" target="_blank" rel="noopener noreferrer">View evidence</a></article>
+                <article class="achievement-card"><h3>System Safeguards</h3><p>Introduction to Cybersecurity</p><time datetime="2026-05-21">May 21, 2026</time><a href="assets/certificates/badge-cybersecurity-system-safeguards-2026.png" target="_blank" rel="noopener noreferrer">View evidence</a></article>
+                <article class="achievement-card"><h3>Network Defense</h3><p>Introduction to Cybersecurity</p><time datetime="2026-05-21">May 21, 2026</time><a href="assets/certificates/badge-cybersecurity-network-defense-2026.png" target="_blank" rel="noopener noreferrer">View evidence</a></article>
+                <article class="achievement-card"><h3>Resource Specialist</h3><p>Introduction to Cybersecurity</p><time datetime="2026-05-21">May 21, 2026</time><a href="assets/certificates/badge-cybersecurity-resource-specialist-2026.png" target="_blank" rel="noopener noreferrer">View evidence</a></article>
+                <article class="achievement-card"><h3>The Entrepreneurial Perspective</h3><p>Discovering Entrepreneurship</p><time datetime="2026-10-14">October 14, 2026</time><a href="assets/certificates/badge-entrepreneurial-perspective-2026.png" target="_blank" rel="noopener noreferrer">View evidence</a></article>
+            </div>
+        </section>
+
+        <section class="credential-group" data-credential-group="badges" aria-labelledby="badges-heading">
+            <p class="certificate-eyebrow">Verified course credentials</p>
+            <h2 class="credential-section-heading" id="badges-heading">Badges</h2>
+            <div class="verified-badge-grid">
+                <article class="verified-badge-card">
+                    <a href="assets/certificates/badge-verified-introduction-to-iot.png" target="_blank" rel="noopener noreferrer" aria-label="Open the verified Cisco Networking Academy badge for Introduction to Internet of Things">
+                        <img src="assets/certificates/badge-verified-introduction-to-iot.png" alt="Verified Cisco Networking Academy badge for Introduction to Internet of Things">
+                    </a>
+                    <div><h3>Introduction to Internet of Things</h3><p>Cisco Networking Academy · Issued February 13, 2026</p><a href="assets/certificates/badge-introduction-to-iot-details.png" target="_blank" rel="noopener noreferrer">View badge details</a></div>
+                </article>
+                <article class="verified-badge-card">
+                    <a href="assets/certificates/badge-verified-introduction-to-cybersecurity.png" target="_blank" rel="noopener noreferrer" aria-label="Open the verified Cisco Networking Academy badge for Introduction to Cybersecurity">
+                        <img src="assets/certificates/badge-verified-introduction-to-cybersecurity.png" alt="Verified Cisco Networking Academy badge for Introduction to Cybersecurity">
+                    </a>
+                    <div><h3>Introduction to Cybersecurity</h3><p>Cisco Networking Academy · Issued May 21, 2026</p><a href="assets/certificates/badge-introduction-to-cybersecurity-details.png" target="_blank" rel="noopener noreferrer">View badge details</a></div>
+                </article>
+            </div>
+        </section>
     </main>
 
     <dialog class="certificate-viewer" aria-label="Certificate preview">
@@ -116,5 +202,6 @@
     <script src="js/bganimation.js"></script>
     <script src="js/oneko.js"></script>
     <script src="js/certificate-viewer.js"></script>
+    <script src="js/credential-filters.js"></script>
 </body>
 </html>
