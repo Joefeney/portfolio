@@ -194,15 +194,225 @@ header h1 {
     transition: box-shadow 180ms ease, transform 180ms ease;
 }
 
+.project-slide[hidden],
+.project-visual-slide[hidden] {
+    display: none;
+}
+
+.project-carousel-stage {
+    position: relative;
+}
+
+.project-logo-panel {
+    display: grid;
+    min-height: clamp(220px, 38vw, 360px);
+    margin: 0;
+    padding: clamp(18px, 5vw, 48px);
+    place-items: center;
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    background: #fff;
+    box-shadow: 0 12px 28px var(--shadow-color), 0 0 18px var(--glow-primary);
+}
+
+.project-logo-panel .project-logo {
+    width: min(100%, 680px);
+    max-height: 330px;
+    border-radius: 0;
+}
+
+.project-nav-arrow {
+    position: absolute;
+    top: 50%;
+    z-index: 4;
+    display: grid;
+    width: 48px;
+    height: 48px;
+    padding: 0;
+    place-items: center;
+    border: 2px solid rgba(255, 255, 255, 0.9);
+    border-radius: 50%;
+    background: rgba(20, 24, 30, 0.72);
+    color: #fff;
+    font-size: 1.05rem;
+    cursor: pointer;
+    transform: translateY(-50%);
+    transition: background 160ms ease, transform 160ms ease;
+}
+
+.project-previous-button {
+    left: 14px;
+}
+
+.project-next-button {
+    right: 14px;
+}
+
+.project-nav-arrow:hover {
+    background: rgba(20, 24, 30, 0.94);
+    transform: translateY(-50%) scale(1.08);
+}
+
+.project-nav-arrow:focus-visible,
+.project-slide-dot:focus-visible {
+    outline: 3px solid var(--focus-ring);
+    outline-offset: 4px;
+}
+
+.project-slide-indicators {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin: 13px 0 24px;
+}
+
+.project-slide-dot {
+    width: 10px;
+    height: 10px;
+    padding: 0;
+    border: 0;
+    border-radius: 999px;
+    background: var(--text-secondary);
+    cursor: pointer;
+    transition: width 160ms ease, background 160ms ease;
+}
+
+.project-slide-dot.is-active {
+    width: 24px;
+    background: var(--accent-primary);
+}
+
+.project-team-slide {
+    padding: 12px 0 0;
+}
+
+.team-slide-title {
+    margin: 0 0 4px;
+    color: var(--timeline-heading);
+    font-size: 1.1rem;
+}
+
+.project-overview > .project-eyebrow {
+    margin: 0 0 8px;
+    color: var(--accent-primary);
+    font-weight: 700;
+    letter-spacing: 0.1em;
+}
+
+.project-overview h3,
+.team-slide-heading h3 {
+    color: var(--timeline-heading);
+    font-size: clamp(1.35rem, 3vw, 1.8rem);
+}
+
+.project-status {
+    margin-top: 6px;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+.team-slide-heading {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.project-team-slide .team-photo-hint {
+    margin-top: 12px;
+}
+
 .project-card:hover {
     box-shadow: 0 10px 24px var(--shadow-color), 0 0 14px var(--glow-primary);
     transform: translateY(-3px);
+}
+
+.additional-project {
+    margin-top: 22px;
+}
+
+.additional-project-heading {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 18px;
+}
+
+.additional-project-logo {
+    display: block;
+    flex: 0 0 auto;
+    width: clamp(120px, 22vw, 200px);
+    aspect-ratio: 1;
+    border-radius: 14px;
+    background: #fff;
+    object-fit: contain;
+}
+
+.additional-project h3 {
+    margin-top: 4px;
+}
+
+.project-repository-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 16px;
+}
+
+.project-repository-links .project-live-link {
+    margin-top: 0;
+}
+
+.project-team-list-heading {
+    margin: 22px 0 10px;
+    color: var(--timeline-heading);
+    font-size: 1rem;
+}
+
+.project-team-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.project-team-list li {
+    display: grid;
+    gap: 3px;
+    padding: 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    background: var(--accent-soft);
+}
+
+.project-team-list strong {
+    color: var(--timeline-heading);
+    font-size: 0.9rem;
+}
+
+.project-team-list span {
+    color: var(--text-secondary);
+    font-size: 0.8rem;
+    line-height: 1.4;
 }
 
 .project-card-heading {
     display: flex;
     align-items: flex-start;
     gap: 12px;
+}
+
+.project-logo {
+    display: block;
+    flex: 0 0 auto;
+    width: clamp(120px, 24vw, 210px);
+    max-height: 112px;
+    border-radius: 10px;
+    background: #fff;
+    object-fit: contain;
 }
 
 .project-icon {
@@ -228,6 +438,14 @@ header h1 {
     margin: 0;
     color: var(--timeline-heading);
     font-size: 1.2rem;
+}
+
+.project-formal-title {
+    margin: 18px 0 0;
+    color: var(--timeline-heading);
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.5;
 }
 
 .project-card .project-copy {
@@ -280,6 +498,142 @@ header h1 {
     background: var(--accent-soft);
     color: var(--text-primary);
     font-size: 0.75rem;
+    line-height: 1.4;
+}
+
+.project-team {
+    margin-top: 28px;
+}
+
+.project-team h4 {
+    margin: 0;
+    color: var(--timeline-heading);
+    font-size: 1.1rem;
+}
+
+.team-photo-hint {
+    margin: 7px 0 14px;
+    color: var(--text-secondary);
+    font-size: 0.86rem;
+}
+
+.team-photo {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    margin: 0;
+    border: 1px solid var(--border-color);
+    border-radius: 14px;
+    background: var(--surface-strong);
+    box-shadow: 0 8px 24px var(--shadow-color);
+}
+
+.team-photo-image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+    object-fit: cover;
+}
+
+.team-member {
+    position: absolute;
+    left: var(--member-x);
+    top: var(--member-y);
+    z-index: 2;
+    transform: translate(-50%, -50%);
+}
+
+.member-hotspot {
+    display: grid;
+    width: 42px;
+    height: 42px;
+    place-items: center;
+    border: 3px solid #fff;
+    border-radius: 50%;
+    background: var(--accent-primary);
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.55);
+    color: transparent;
+    cursor: pointer;
+    transition: transform 160ms ease, box-shadow 160ms ease;
+}
+
+.member-hotspot::before {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: #fff;
+    content: "";
+}
+
+.member-hotspot:hover,
+.member-hotspot:focus-visible,
+.team-member.is-open .member-hotspot {
+    transform: scale(1.1);
+    box-shadow: 0 0 0 5px rgba(var(--accent-primary-rgb), 0.3), 0 3px 14px rgba(0, 0, 0, 0.6);
+}
+
+.member-hotspot:focus-visible {
+    outline: 3px solid var(--focus-ring);
+    outline-offset: 4px;
+}
+
+.member-role-card {
+    position: absolute;
+    top: calc(100% + 14px);
+    left: 0;
+    display: none;
+    width: min(280px, calc(100vw - 36px));
+    padding: 15px;
+    border: 1px solid var(--border-color);
+    border-radius: 13px;
+    background: var(--menu-bg);
+    box-shadow: 0 12px 34px rgba(0, 0, 0, 0.48);
+    color: var(--text-primary);
+    text-align: left;
+    transform: none;
+}
+
+.team-member-john .member-role-card {
+    left: -82px;
+}
+
+.team-member-joseph .member-role-card {
+    left: -165px;
+}
+
+.team-member-cybier .member-role-card {
+    right: 0;
+    left: auto;
+}
+
+.team-member:hover .member-role-card,
+.team-member:focus-within .member-role-card,
+.team-member.is-open .member-role-card {
+    display: block;
+}
+
+.member-role-card h5 {
+    margin: 0 0 4px;
+    color: var(--timeline-heading);
+    font-size: 0.98rem;
+}
+
+.member-role-title {
+    margin: 0 0 9px;
+    color: var(--accent-primary);
+    font-size: 0.82rem;
+    font-weight: 700;
+    line-height: 1.4;
+}
+
+.member-role-card ul {
+    display: grid;
+    gap: 6px;
+    margin: 0;
+    padding-left: 18px;
+    color: var(--text-secondary);
+    font-size: 0.78rem;
     line-height: 1.4;
 }
 
@@ -426,6 +780,26 @@ nav:not(.navbar) button:after {
 
     .project-card {
         padding: 18px 15px;
+    }
+
+    .project-logo-panel {
+        min-height: 210px;
+        margin-bottom: 22px;
+        padding: 18px;
+    }
+
+    .additional-project-heading {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .project-team-list {
+        grid-template-columns: 1fr;
+    }
+
+    .project-nav-arrow {
+        width: 40px;
+        height: 40px;
     }
 
     nav:not(.navbar) button {

@@ -37,28 +37,128 @@
     </div>
 
     <section class="project-container" aria-labelledby="projects-heading">
-        <h2 id="projects-heading">Capstone Project Experience</h2>
-        <article class="project-card">
-            <div class="project-card-heading">
-                <span class="project-icon" aria-hidden="true"><i class="fas fa-laptop-code"></i></span>
+        <h2 id="projects-heading">Project Experience</h2>
+        <article class="project-card project-carousel" aria-label="e-RoomReserve capstone and IoT project">
+            <div class="project-carousel-stage" role="region" aria-roledescription="carousel" aria-label="e-RoomReserve project images">
+                <div class="project-visual-slide project-logo-panel" id="project-logo-slide" role="group" aria-roledescription="slide" aria-label="Project logo, 1 of 2">
+                    <img class="project-logo" src="assets/images/eroomreserve-logo.png" alt="e-RoomReserve logo">
+                </div>
+                <div class="project-visual-slide project-team-slide" id="project-team-slide" role="group" aria-roledescription="slide" aria-label="Project team and roles, 2 of 2" hidden>
+                    <h3 class="team-slide-title">Project Team and Roles</h3>
+                    <p class="team-photo-hint">Hover over a person or focus their marker to view their role. On touchscreens, tap a marker.</p>
+                    <div class="team-photo" aria-label="e-RoomReserve project team, left to right: Adrian Echepari, John Cyrus Agoncillo, Joseph Emmanuel A. Magno, and Cybier Kim Otchia">
+                    <img class="team-photo-image" src="assets/images/eroomreserve-team.png" alt="The four e-RoomReserve team members presenting their project">
+
+                    <div class="team-member team-member-adrian" style="--member-x: 17%; --member-y: 60%;">
+                        <button class="member-hotspot" type="button" aria-controls="role-adrian" aria-expanded="false" aria-label="Show Adrian Echepari's role and contributions">
+                        </button>
+                        <div class="member-role-card" id="role-adrian">
+                            <h5>Adrian Echepari</h5>
+                            <p class="member-role-title">Scrum Master</p>
+                            <ul>
+                                <li>Sprint planning and backlog management</li>
+                                <li>Team coordination and stand-ups</li>
+                                <li>Progress tracking and retrospectives</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="team-member team-member-john" style="--member-x: 33%; --member-y: 60%;">
+                        <button class="member-hotspot" type="button" aria-controls="role-john" aria-expanded="false" aria-label="Show John Cyrus Agoncillo's role and contributions">
+                        </button>
+                        <div class="member-role-card" id="role-john">
+                            <h5>John Cyrus Agoncillo</h5>
+                            <p class="member-role-title">Quality Assurance Engineer and Technical Writer</p>
+                            <ul>
+                                <li>Unit, integration, and user acceptance testing</li>
+                                <li>Technical documentation and diagrams</li>
+                                <li>Research and related literature</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="team-member team-member-joseph" style="--member-x: 64%; --member-y: 60%;">
+                        <button class="member-hotspot" type="button" aria-controls="role-joseph" aria-expanded="false" aria-label="Show Joseph Emmanuel A. Magno's role and contributions">
+                        </button>
+                        <div class="member-role-card" id="role-joseph">
+                            <h5>Joseph Emmanuel A. Magno</h5>
+                            <p class="member-role-title">Back-End Developer</p>
+                            <ul>
+                                <li>Next.js API routes and business logic</li>
+                                <li>Firebase setup and BLE occupancy logic</li>
+                                <li>AI recommendation and VADER module</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="team-member team-member-cybier" style="--member-x: 84%; --member-y: 60%;">
+                        <button class="member-hotspot" type="button" aria-controls="role-cybier" aria-expanded="false" aria-label="Show Cybier Kim Otchia's role and contributions">
+                        </button>
+                        <div class="member-role-card" id="role-cybier">
+                            <h5>Cybier Kim Otchia</h5>
+                            <p class="member-role-title">Front-End Developer</p>
+                            <ul>
+                                <li>React Native and Expo mobile app</li>
+                                <li>Admin web portal UI with Next.js</li>
+                                <li>Push notification integration</li>
+                            </ul>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <button class="project-nav-arrow project-previous-button" type="button" aria-label="Show previous project image" aria-controls="project-logo-slide project-team-slide">
+                    <i class="fas fa-chevron-left" aria-hidden="true"></i>
+                </button>
+                <button class="project-nav-arrow project-next-button" type="button" aria-label="Show next project image" aria-controls="project-logo-slide project-team-slide">
+                    <i class="fas fa-chevron-right" aria-hidden="true"></i>
+                </button>
+            </div>
+            <div class="project-slide-indicators" role="group" aria-label="Choose project image">
+                <button class="project-slide-dot is-active" type="button" aria-label="Show project logo" aria-pressed="true" data-slide="0"></button>
+                <button class="project-slide-dot" type="button" aria-label="Show project team and roles" aria-pressed="false" data-slide="1"></button>
+            </div>
+
+            <section class="project-overview" id="project-overview" aria-labelledby="project-title">
+                <p class="project-eyebrow">Campus room booking | IoT</p>
+                <h3 id="project-title">e-RoomReserve</h3>
+                <p class="project-status">Capstone and IoT project · In progress</p>
+                <p class="project-formal-title">Development of a Smart Room Reservation and Occupancy Monitoring System Using BLE Beacon Technology for St. Dominic College of Asia</p>
+                <p class="project-copy">A room reservation web app with Firebase Authentication and Firestore, plus reservation document uploads using Supabase Storage.</p>
+                <p class="project-copy">The app also includes Next.js API routes, PDF and Excel exports, VADER-based sentiment analysis, and Bluetooth Low Energy (BLE) room-status features.</p>
+                <a class="project-live-link" href="https://eroomreserve.vercel.app/" target="_blank" rel="noopener noreferrer">
+                    View Live Application <i class="fas fa-external-link-alt" aria-hidden="true"></i>
+                </a>
+                <ul class="project-tech" aria-label="Project technologies">
+                    <li>Next.js</li><li>React</li><li>React Native</li><li>Expo</li><li>TypeScript</li>
+                    <li>Tailwind CSS</li><li>Firebase</li><li>Supabase Storage</li><li>Bluetooth Low Energy (BLE)</li>
+                </ul>
+            </section>
+        </article>
+
+        <article class="project-card additional-project" aria-labelledby="sarisite-title">
+            <div class="additional-project-heading">
+                <img class="additional-project-logo" src="assets/images/sarisite-logo.png" alt="SariSite logo">
                 <div>
-                    <p class="project-eyebrow">Capstone project</p>
-                    <h3>e-RoomReserve</h3>
+                    <p class="project-eyebrow">Past website project</p>
+                    <h3 id="sarisite-title">SariSite — Sari-Sari Store Online Ordering System</h3>
                 </div>
             </div>
-            <p class="project-copy">A room reservation web app with Firebase Authentication and Firestore, plus reservation document uploads using Supabase Storage.</p>
-            <p class="project-copy">The app also includes Next.js API routes, PDF and Excel exports, VADER-based sentiment analysis, and Bluetooth Low Energy (BLE) room-status features.</p>
-            <a class="project-live-link" href="https://eroomreserve.vercel.app/" target="_blank" rel="noopener noreferrer">
-                View Live Application <i class="fas fa-external-link-alt" aria-hidden="true"></i>
-            </a>
-            <ul class="project-tech" aria-label="Project technologies">
-                <li>Next.js</li>
-                <li>React</li>
-                <li>TypeScript</li>
-                <li>Tailwind CSS</li>
-                <li>Firebase</li>
-                <li>Supabase Storage</li>
-                <li>Bluetooth Low Energy (BLE)</li>
+            <p class="project-copy">A website project focused on helping neighborhood sari-sari stores offer online ordering. It explores how a local digital ordering service could make daily necessities more accessible to subdivision residents, improve customer convenience, and support store operations.</p>
+            <p class="project-formal-title">My role: Back-End Developer. The project was built as one system across separate backend and frontend repositories.</p>
+            <div class="project-repository-links" aria-label="SariSite source code">
+                <a class="project-live-link" href="https://github.com/otchia/sari-sari-store-project" target="_blank" rel="noopener noreferrer">
+                    Backend / Next.js Repository <i class="fas fa-external-link-alt" aria-hidden="true"></i>
+                </a>
+                <a class="project-live-link" href="https://github.com/otchia/sari-sari-store-project-frontend" target="_blank" rel="noopener noreferrer">
+                    Frontend Repository <i class="fas fa-external-link-alt" aria-hidden="true"></i>
+                </a>
+            </div>
+            <h4 class="project-team-list-heading">Project Team</h4>
+            <ul class="project-team-list">
+                <li><strong>Adrian Echepari</strong><span>Scrum Master</span></li>
+                <li><strong>John Cyrus Agoncillo</strong><span>Quality Assurance Engineer and Technical Writer</span></li>
+                <li><strong>Joseph Emmanuel A. Magno</strong><span>Back-End Developer</span></li>
+                <li><strong>Cybier Kim Otchia</strong><span>Front-End Developer</span></li>
             </ul>
         </article>
     </section>
@@ -91,9 +191,10 @@
     </div>
     </nav>
 
-    <script src="js/scroll-control.js"></script>
     <script src="js/theme-switcher.js"></script>
     <script src="js/bganimation.js"></script>
     <script src="js/oneko.js"></script>
+    <script src="js/project-team.js"></script>
+    <script src="js/project-carousel.js"></script>
 </body>
 </html>
