@@ -138,7 +138,8 @@ body {
 
 .images-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(100%, 138px), 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(110px, 140px));
+    justify-content: center;
     gap: 14px;
 }
 
@@ -150,16 +151,36 @@ body {
 }
 
 .tech-card {
+    width: 100%;
+    max-width: 140px;
     min-width: 0;
-    min-height: 156px;
-    padding: 16px 12px 14px;
-    gap: 12px;
+    height: 112px;
+    min-height: 112px;
+    justify-self: center;
+    padding: 10px 8px;
+    gap: 7px;
     border: 1px solid var(--border-color);
     border-radius: 14px;
     background: var(--timeline-surface);
     color: var(--text-primary);
     box-shadow: 0 3px 10px var(--shadow-soft);
     transition: transform 160ms ease, border-color 160ms ease, box-shadow 160ms ease;
+}
+
+.tech-card.filter-reveal {
+    animation: filter-card-enter 420ms cubic-bezier(0.2, 0.7, 0.2, 1) backwards;
+    animation-delay: var(--filter-animation-delay, 0ms);
+}
+
+@keyframes filter-card-enter {
+    from {
+        opacity: 0;
+        transform: translateY(9px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .tech-card:hover {
@@ -171,8 +192,8 @@ body {
 .tech-card img {
     display: block;
     width: 100%;
-    max-width: 88px;
-    height: 76px;
+    max-width: 54px;
+    height: 52px;
     margin: 0;
     object-fit: contain;
 }
@@ -243,11 +264,11 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 2.5em;
+    min-height: 2em;
     margin-top: auto;
     color: var(--text-primary);
-    font-size: 0.9rem;
-    line-height: 1.35;
+    font-size: 0.76rem;
+    line-height: 1.2;
     font-weight: 600;
 }
 
@@ -344,22 +365,26 @@ nav a:hover:after {
     }
 
     .images-container {
-        grid-template-columns: repeat(auto-fit, minmax(min(100%, 126px), 1fr));
-        gap: 10px;
+        grid-template-columns: repeat(auto-fit, minmax(72px, 1fr));
+        gap: 6px;
     }
 
     .tech-card {
-        min-height: 142px;
-        padding: 14px 9px 12px;
+        max-width: 100%;
+        height: 82px;
+        min-height: 82px;
+        padding: 7px 4px;
+        gap: 4px;
     }
 
     .tech-card img {
-        height: 68px;
-        max-width: 78px;
+        height: 40px;
+        max-width: 40px;
     }
 
     .tech-card span {
-        font-size: 0.84rem;
+        font-size: 0.63rem;
+        line-height: 1.1;
     }
 
     .project-card h2 {
@@ -379,6 +404,10 @@ nav a:hover:after {
 
     .tech-card:hover {
         transform: none;
+    }
+
+    .tech-card.filter-reveal {
+        animation: none;
     }
 }
 

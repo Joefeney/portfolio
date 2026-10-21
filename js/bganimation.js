@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
     const bgContainer = document.querySelector(".bganimation");
+    if (!bgContainer || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
 
     function createShape() {
         const shape = document.createElement("div");

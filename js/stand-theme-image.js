@@ -4,19 +4,19 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const standByTheme = {
         dark: {
-            src: "assets/images/stands/stand-dark.png",
+            src: "assets/images/stands/stand-dark.webp",
             alt: "Purple Haze stand artwork"
         },
         light: {
-            src: "assets/images/stands/stand-light.png",
+            src: "assets/images/stands/stand-light.webp",
             alt: "The World Over Heaven stand artwork"
         },
         teal: {
-            src: "assets/images/stands/stand-crimson.png",
+            src: "assets/images/stands/stand-crimson.webp",
             alt: "King Crimson stand artwork"
         },
         forest: {
-            src: "assets/images/stands/stand-green.png",
+            src: "assets/images/stands/stand-green.webp",
             alt: "Hierophant Green stand artwork"
         }
     };

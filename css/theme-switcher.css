@@ -49,32 +49,32 @@ body[data-theme="light"] {
     --text-primary: #29251f;
     --text-secondary: #655d51;
     --border-color: #d6c8b1;
-    --accent-primary: #735323;
-    --accent-primary-rgb: 115, 83, 35;
+    --accent-primary: #704080;
+    --accent-primary-rgb: 112, 64, 128;
     --accent-on-primary: #ffffff;
-    --accent-secondary: #735323;
-    --accent-secondary-rgb: 115, 83, 35;
-    --accent-hover: #735323;
-    --accent-soft: rgba(128, 96, 39, 0.1);
-    --focus-ring: #806027;
-    --selection-bg: #806027;
+    --accent-secondary: #704080;
+    --accent-secondary-rgb: 112, 64, 128;
+    --accent-hover: #60356f;
+    --accent-soft: rgba(112, 64, 128, 0.1);
+    --focus-ring: #704080;
+    --selection-bg: #704080;
     --selection-text: #ffffff;
     --shadow-color: rgba(45, 38, 49, 0.13);
     --shadow-soft: rgba(45, 38, 49, 0.07);
-    --decoration-primary: rgba(140, 106, 47, 0.1);
-    --decoration-secondary: rgba(124, 106, 79, 0.08);
+    --decoration-primary: rgba(112, 64, 128, 0.1);
+    --decoration-secondary: rgba(112, 64, 128, 0.07);
     --timeline-line: #b2a58f;
     --timeline-surface: #e7dbc5;
     --timeline-heading: #29251f;
     --timeline-text: #29251f;
     --timeline-muted: #655d51;
-    --badge-gradient: linear-gradient(145deg, #735323, #927341);
+    --badge-gradient: linear-gradient(145deg, #704080, #8b6698);
     --badge-text: #ffffff;
-    --glow-primary: rgba(128, 96, 39, 0.12);
-    --glow-secondary: rgba(115, 83, 35, 0.08);
-    --project-tag-border: rgba(115, 83, 35, 0.32);
-    --project-tag-text: #654b20;
-    --title-gradient: linear-gradient(45deg, #29251f, #806027, #a08048);
+    --glow-primary: rgba(112, 64, 128, 0.12);
+    --glow-secondary: rgba(112, 64, 128, 0.08);
+    --project-tag-border: rgba(112, 64, 128, 0.3);
+    --project-tag-text: #593467;
+    --title-gradient: linear-gradient(45deg, #29251f, #704080, #8b6698);
 }
 
 body[data-theme="teal"] {
@@ -166,8 +166,26 @@ body {
     pointer-events: none;
 }
 
-body .hero .text-warning {
+body .hero .hero-subtitle {
     color: var(--accent-secondary) !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    [data-aos] {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+        animation: none !important;
+    }
+
+    .shape {
+        display: none !important;
+        animation: none !important;
+    }
+
+    .text {
+        animation: none !important;
+    }
 }
 
 nav.navbar {

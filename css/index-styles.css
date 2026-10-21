@@ -118,6 +118,31 @@
         color: var(--accent-secondary);
     }
 
+    .hero-contact-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        margin-top: 4px;
+        padding: 9px 16px;
+        border: 1px solid var(--accent-primary);
+        border-radius: 999px;
+        color: var(--accent-primary);
+        font-size: 0.95rem;
+        font-weight: 600;
+        text-decoration: none;
+        transition: background-color 160ms ease, color 160ms ease;
+    }
+
+    .hero-contact-link:hover {
+        background: var(--accent-primary);
+        color: var(--accent-on-primary);
+    }
+
+    .hero-contact-link:focus-visible {
+        outline: 3px solid var(--focus-ring);
+        outline-offset: 3px;
+    }
+
     nav {
         display: flex;
         justify-content: space-around;

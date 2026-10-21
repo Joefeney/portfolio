@@ -258,6 +258,37 @@ nav a:hover:after {
     color: var(--accent-secondary);
 }
 
+.contact-email {
+    margin: 28px 0 0;
+}
+
+.contact-email-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    max-width: 100%;
+    padding: 10px 16px;
+    border: 1px solid var(--accent-primary);
+    border-radius: 999px;
+    color: var(--accent-primary);
+    font-size: 0.95rem;
+    font-weight: 600;
+    overflow-wrap: anywhere;
+    text-decoration: none;
+    transition: background-color 160ms ease, color 160ms ease;
+}
+
+.contact-email-link:hover {
+    background: var(--accent-primary);
+    color: var(--accent-on-primary);
+}
+
+.contact-email-link:focus-visible {
+    outline: 3px solid var(--focus-ring);
+    outline-offset: 3px;
+}
+
 
 @media (max-width: 768px) {
     .hero img {

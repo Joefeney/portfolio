@@ -1,4 +1,6 @@
 (function oneko() {
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
     const nekoEl = document.createElement("div");
     let nekoPosX = 32;
     let nekoPosY = 32;

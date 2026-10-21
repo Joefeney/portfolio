@@ -27,6 +27,18 @@ const initializeTechFilters = () => {
                 }
             });
 
+            const allCards = document.querySelectorAll(".tech-card");
+            const visibleCards = document.querySelectorAll(".tech-category:not([hidden]) .tech-card");
+            allCards.forEach((card) => {
+                card.classList.remove("filter-reveal");
+                card.style.removeProperty("--filter-animation-delay");
+            });
+            void document.querySelector(".tech-stack-page").offsetHeight;
+            visibleCards.forEach((card, index) => {
+                card.style.setProperty("--filter-animation-delay", `${Math.min(index % 6, 5) * 35}ms`);
+                card.classList.add("filter-reveal");
+            });
+
             if (window.AOS) {
                 requestAnimationFrame(() => window.AOS.refreshHard());
             }
