@@ -35,7 +35,11 @@
 .credential-filter.is-active {
     border-color: var(--accent-primary);
     background: var(--accent-primary);
-    color: var(--surface-strong);
+    color: var(--accent-on-primary);
+}
+
+.credential-filter:hover {
+    box-shadow: 0 2px 8px var(--shadow-soft);
 }
 
 .credential-filter:focus-visible {
@@ -61,6 +65,8 @@ body.certificate-viewer-open {
     margin: 0 0 18px;
     color: var(--timeline-heading);
     font-size: clamp(1.4rem, 3vw, 1.9rem);
+    font-weight: 700;
+    line-height: 1.25;
 }
 
 .course-completions {
@@ -88,7 +94,7 @@ body.certificate-viewer-open {
     border: 1px solid var(--border-color);
     border-radius: 18px;
     background: var(--timeline-surface);
-    box-shadow: 0 12px 32px var(--shadow-color);
+    box-shadow: 0 4px 14px var(--shadow-soft);
     color: var(--text-primary);
 }
 
@@ -169,7 +175,7 @@ body.certificate-viewer-open {
     border: 1px solid var(--border-color);
     border-radius: 14px;
     background: var(--timeline-surface);
-    box-shadow: 0 8px 22px var(--shadow-color);
+    box-shadow: 0 4px 14px var(--shadow-soft);
 }
 
 .achievement-card h3 {
@@ -213,7 +219,7 @@ body.certificate-viewer-open {
     border: 1px solid var(--border-color);
     border-radius: 16px;
     background: var(--timeline-surface);
-    box-shadow: 0 10px 26px var(--shadow-color);
+    box-shadow: 0 4px 14px var(--shadow-soft);
 }
 
 .verified-badge-card img {
@@ -291,14 +297,15 @@ body.certificate-viewer-open {
     border: 1px solid var(--border-color);
     border-radius: 18px;
     background: var(--timeline-surface);
-    box-shadow: 0 12px 32px var(--shadow-color);
+    box-shadow: 0 4px 14px var(--shadow-soft);
     text-align: left;
     transition: transform 180ms ease, box-shadow 180ms ease;
 }
 
 .certificate-card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 12px 28px var(--shadow-color), 0 0 14px var(--glow-primary);
+    transform: translateY(-2px);
+    border-color: rgba(var(--accent-primary-rgb), 0.55);
+    box-shadow: 0 7px 18px var(--shadow-color);
 }
 
 .certificate-preview {
@@ -452,6 +459,7 @@ body.certificate-viewer-open {
     margin: 0 0 18px;
     color: var(--timeline-heading);
     font-size: 1.3rem;
+    line-height: 1.35;
 }
 
 .certificate-details dl {
@@ -475,6 +483,14 @@ body.certificate-viewer-open {
     color: var(--text-primary);
     font-size: 0.9rem;
     overflow-wrap: anywhere;
+}
+
+.course-document-link:focus-visible,
+.achievement-card a:focus-visible,
+.verified-badge-card a:focus-visible {
+    border-radius: 3px;
+    outline: 2px solid var(--focus-ring);
+    outline-offset: 3px;
 }
 
 @media (max-width: 760px) {

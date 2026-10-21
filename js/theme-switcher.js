@@ -12,14 +12,15 @@ document.addEventListener("DOMContentLoaded", () => {
     const themes = {
         dark: { icon: "fa-moon", label: "Dark" },
         light: { icon: "fa-sun", label: "Light" },
-        teal: { icon: "fa-tint", label: "Teal" },
-        forest: { icon: "fa-leaf", label: "Forest" }
+        teal: { icon: "fa-tint", label: "Crimson" },
+        forest: { icon: "fa-leaf", label: "Green" }
     };
 
     function applyTheme(themeName) {
         const theme = themes[themeName];
         if (!theme) return;
 
+        const previousTheme = body.getAttribute("data-theme");
         body.setAttribute("data-theme", themeName);
         themeIcon.className = `fas ${theme.icon}`;
         themeLabel.textContent = theme.label;
@@ -27,6 +28,12 @@ document.addEventListener("DOMContentLoaded", () => {
             option.setAttribute("aria-checked", String(option.dataset.theme === themeName));
         });
         localStorage.setItem("selectedTheme", themeName);
+
+        if (previousTheme && previousTheme !== themeName) {
+            window.dispatchEvent(new CustomEvent("portfolio:themechange", {
+                detail: { theme: themeName, previousTheme }
+            }));
+        }
     }
 
     function closeMenu(returnFocus = false) {

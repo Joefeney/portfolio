@@ -161,24 +161,23 @@ nav a:hover:after {
 
 
 .about-me {
-    width: 90%;
-    max-width: 600px;
+    width: min(90%, 660px);
     margin: auto;
-    margin-top: 100px;
-    padding: 20px;
-    border-radius: 15px;
-    border: 2px solid var(--border-color);
+    margin-top: clamp(40px, 8vh, 76px);
+    padding: clamp(22px, 4vw, 32px);
+    border: 1px solid var(--border-color);
+    border-radius: 18px;
     background-color: var(--surface-bg);
+    box-shadow: 0 8px 24px var(--shadow-soft);
     z-index: 1;
     position: relative;
-    overflow: auto;
     margin-bottom: 80px;
 }
 
 .about-me p {
     text-align: left;
-    margin-top: 20px;
-    line-height: 1.6;
+    margin-top: 16px;
+    line-height: 1.7;
 }
 
 .about-section-links {
@@ -188,7 +187,7 @@ nav a:hover:after {
     gap: 12px;
     width: 90%;
     max-width: 600px;
-    margin: 70px auto 0;
+    margin: clamp(36px, 7vh, 64px) auto 0;
     position: relative;
     z-index: 1;
 }
@@ -214,13 +213,14 @@ nav a:hover:after {
 }
 
 .about-section-links a:hover {
-    border-color: var(--accent-primary);
-    background: var(--timeline-surface);
+    border-color: var(--accent-hover);
+    background: var(--accent-soft);
     color: var(--accent-primary);
-    box-shadow: 0 0 12px var(--glow-primary);
+    box-shadow: 0 4px 12px var(--shadow-soft);
 }
 
 .about-section-links a:focus-visible {
+    color: var(--accent-primary);
     outline: 2px solid var(--focus-ring);
     outline-offset: 3px;
 }

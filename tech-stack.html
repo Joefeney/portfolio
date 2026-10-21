@@ -23,169 +23,80 @@
   <div class="bganimation"></div>
 
 
-  <div class="section-container container py-5">
+  <main class="section-container tech-stack-page">
     <h1 class="text text-center" data-aos="fade-down">Tech Stack</h1>
 
-    <div class="images-container row row-cols-2 row-cols-md-3 row-cols-lg-4 g-4">
-      <div class="col">
-        <div class="image-box text-center" data-aos="zoom-in" data-aos-delay="100">
-          <img src="assets/images/java.png" alt="Java">
-          <span>Java</span>
-        </div>
-      </div>
-      <div class="col">
-        <div class="image-box text-center" data-aos="zoom-in" data-aos-delay="200">
-          <img src="assets/images/cpp.png" alt="C++">
-          <span>C++</span>
-        </div>
-      </div>
-      <div class="col">
-        <div class="image-box text-center" data-aos="zoom-in" data-aos-delay="300">
-          <img src="assets/images/logo-mysql.png" alt="MySQL">
-          <span>MySQL</span>
-        </div>
-      </div>
-      <div class="col">
-        <div class="image-box text-center" data-aos="zoom-in" data-aos-delay="400">
-          <img src="assets/images/python.png" alt="Python">
-          <span>Python</span>
-        </div>
-      </div>
-      <div class="col">
-        <div class="image-box text-center" data-aos="zoom-in" data-aos-delay="500">
-          <img src="assets/images/logo-html.png" alt="HTML">
-          <span>HTML</span>
-        </div>
-      </div>
-      <div class="col">
-        <div class="image-box text-center" data-aos="zoom-in" data-aos-delay="600">
-          <img src="assets/images/javas.png" alt="JavaScript">
-          <span>JavaScript</span>
-        </div>
-      </div>
-      <div class="col">
-        <div class="image-box text-center" data-aos="zoom-in" data-aos-delay="700">
-          <img src="assets/images/css.png" alt="CSS">
-          <span>CSS</span>
-        </div>
-      </div>
-      <div class="col">
-        <div class="image-box text-center" data-aos="zoom-in" data-aos-delay="700">
-          <img src="assets/images/nodejs.png" alt="Nodejs">
-          <span>Node.js</span>
-        </div>
-      </div>
-      <div class="col">
-        <div class="image-box text-center" data-aos="zoom-in" data-aos-delay="700">
-          <img src="assets/images/expressjs-removebg-preview.png" alt="Express">
-          <span>Express</span>
-        </div>
-      </div>
-      <div class="col">
-        <div class="image-box text-center" data-aos="zoom-in" data-aos-delay="700">
-          <img src="assets/images/flutter-removebg-preview.png" alt="Flutter">
-          <span>Flutter</span>
-        </div>
-      </div>
-      <div class="col">
-        <div class="image-box text-center" data-aos="zoom-in" data-aos-delay="700">
-          <img src="assets/images/Dart.png" alt="Dart">
-          <span>Dart</span>
-        </div>
-      </div>
-      <div class="col">
-        <div class="image-box text-center" data-aos="zoom-in" data-aos-delay="700">
-          <img src="assets/images/mongodb.png" alt="MongoDB">
-          <span>MongoDB</span>
-        </div>
-      </div>
-      <div class="col">
-        <div class="image-box text-center" data-aos="zoom-in" data-aos-delay="700">
-          <img src="assets/images/firebase.png" alt="Firebase">
-          <span>Firebase</span>
-        </div>
-      </div>
-      <div class="col">
-        <div class="image-box text-center" data-aos="zoom-in" data-aos-delay="700">
-          <img src="assets/images/nextjs.png" alt="Next.js">
-          <span>Next.js</span>
-        </div>
-      </div>
-      <div class="col">
-        <div class="image-box text-center" data-aos="zoom-in" data-aos-delay="700">
-          <img src="assets/images/react.png" alt="React">
-          <span>React</span>
-        </div>
-      </div>
-      <div class="col">
-        <div class="image-box text-center" data-aos="zoom-in" data-aos-delay="700">
-          <img src="assets/images/bootstrap.png" alt="Bootstrap">
-          <span>Bootstrap</span>
-        </div>
-      </div>
-      <div class="col">
-        <div class="image-box text-center" data-aos="zoom-in" data-aos-delay="700">
-          <img src="assets/images/typescript.png" alt="TypeScript">
-          <span>TypeScript</span>
-        </div>
-      </div>
-      <div class="col">
-        <div class="image-box text-center" data-aos="zoom-in" data-aos-delay="700">
-          <img src="assets/images/tailwind.png" alt="Tailwind CSS">
-          <span>Tailwind CSS</span>
-        </div>
-      </div>
-      <div class="col">
-        <div class="image-box text-center" data-aos="zoom-in" data-aos-delay="700">
-          <img src="assets/images/supabase.png" alt="Supabase Storage">
-          <span>Supabase</span>
-        </div>
-      </div>
+    <div class="tech-filters" role="group" aria-label="Filter technologies by category">
+      <button class="tech-filter is-active" type="button" data-tech-filter="all" aria-pressed="true">All</button>
+      <button class="tech-filter" type="button" data-tech-filter="languages" aria-pressed="false">Languages</button>
+      <button class="tech-filter" type="button" data-tech-filter="frontend" aria-pressed="false">Frontend</button>
+      <button class="tech-filter" type="button" data-tech-filter="frameworks" aria-pressed="false">Frameworks &amp; Libraries</button>
+      <button class="tech-filter" type="button" data-tech-filter="backend" aria-pressed="false">Backend</button>
+      <button class="tech-filter" type="button" data-tech-filter="databases" aria-pressed="false">Databases</button>
+      <button class="tech-filter" type="button" data-tech-filter="tools" aria-pressed="false">Developer Tools &amp; Deployment</button>
     </div>
-  </div>
 
-  <div class="section-container container py-5">
-    <h1 class="text text-center" data-aos="fade-down">Developer Tools</h1>
+    <section class="tech-category" data-tech-category="languages" aria-labelledby="languages-heading">
+      <h2 class="tech-category-heading" id="languages-heading">Languages</h2>
+      <div class="images-container">
+        <article class="image-box tech-card" data-aos="zoom-in"><img src="assets/images/java.png" alt="Java"><span>Java</span></article>
+        <article class="image-box tech-card" data-aos="zoom-in"><img src="assets/images/cpp.png" alt="C++"><span>C++</span></article>
+        <article class="image-box tech-card" data-aos="zoom-in"><img src="assets/images/python.png" alt="Python"><span>Python</span></article>
+        <article class="image-box tech-card" data-aos="zoom-in"><img src="assets/images/javas.png" alt="JavaScript"><span>JavaScript</span></article>
+        <article class="image-box tech-card" data-aos="zoom-in"><img src="assets/images/Dart.png" alt="Dart"><span>Dart</span></article>
+        <article class="image-box tech-card" data-aos="zoom-in"><img src="assets/images/typescript.png" alt="TypeScript"><span>TypeScript</span></article>
+      </div>
+    </section>
 
-    <div class="images-container row row-cols-2 row-cols-md-3 row-cols-lg-4 g-4">
-      <div class="col">
-        <div class="image-box text-center" data-aos="flip-left" data-aos-delay="100">
-          <img src="assets/images/android-studio-logo.png" alt="Android Studio" class="img-fluid">
-          <span>Android Studio</span>
-        </div>
+    <section class="tech-category" data-tech-category="frontend" aria-labelledby="frontend-heading">
+      <h2 class="tech-category-heading" id="frontend-heading">Frontend</h2>
+      <div class="images-container">
+        <article class="image-box tech-card" data-aos="zoom-in"><img src="assets/images/logo-html.png" alt="HTML"><span>HTML</span></article>
+        <article class="image-box tech-card" data-aos="zoom-in"><img src="assets/images/css.png" alt="CSS"><span>CSS</span></article>
       </div>
-      <div class="col">
-        <div class="image-box text-center" data-aos="flip-left" data-aos-delay="200">
-          <img src="assets/images/visual-studio-logo.png" alt="Visual Studio" class="img-fluid">
-          <span>Visual Studio</span>
-        </div>
+    </section>
+
+    <section class="tech-category" data-tech-category="frameworks" aria-labelledby="frameworks-heading">
+      <h2 class="tech-category-heading" id="frameworks-heading">Frameworks &amp; Libraries</h2>
+      <div class="images-container">
+        <article class="image-box tech-card" data-aos="zoom-in"><img src="assets/images/flutter-removebg-preview.png" alt="Flutter"><span>Flutter</span></article>
+        <article class="image-box tech-card" data-aos="zoom-in"><img src="assets/images/nextjs.png" alt="Next.js"><span>Next.js</span></article>
+        <article class="image-box tech-card" data-aos="zoom-in"><img src="assets/images/react.png" alt="React"><span>React</span></article>
+        <article class="image-box tech-card" data-aos="zoom-in"><img src="assets/images/bootstrap.png" alt="Bootstrap"><span>Bootstrap</span></article>
+        <article class="image-box tech-card" data-aos="zoom-in"><img src="assets/images/tailwind.png" alt="Tailwind CSS"><span>Tailwind CSS</span></article>
       </div>
-      <div class="col">
-        <div class="image-box text-center" data-aos="flip-left" data-aos-delay="100">
-          <img src="assets/images/postman.webp" alt="Postman" class="img-fluid">
-          <span>Postman</span>
-        </div>
-    </div>
-    <div class="col">
-        <div class="image-box text-center" data-aos="flip-left" data-aos-delay="100">
-          <img src="assets/images/render.png" alt="Render" class="img-fluid">
-          <span>Render</span>
-        </div>
-    </div>
-      <div class="col">
-        <div class="image-box text-center" data-aos="flip-left" data-aos-delay="100">
-          <img src="assets/images/Git.png" alt="Git" class="img-fluid">
-          <span>Git</span>
-        </div>
+    </section>
+
+    <section class="tech-category" data-tech-category="backend" aria-labelledby="backend-heading">
+      <h2 class="tech-category-heading" id="backend-heading">Backend</h2>
+      <div class="images-container">
+        <article class="image-box tech-card" data-aos="zoom-in"><img src="assets/images/nodejs.png" alt="Nodejs"><span>Node.js</span></article>
+        <article class="image-box tech-card" data-aos="zoom-in"><img src="assets/images/expressjs-removebg-preview.png" alt="Express"><span>Express</span></article>
+        <article class="image-box tech-card" data-aos="zoom-in"><img src="assets/images/firebase.png" alt="Firebase"><span>Firebase</span></article>
+        <article class="image-box tech-card" data-aos="zoom-in"><img src="assets/images/supabase.png" alt="Supabase Storage"><span>Supabase</span></article>
       </div>
-    </div>
-    <div class="col">
-        <div class="image-box text-center" data-aos="zoom-in" data-aos-delay="700">
-          <img src="assets/images/vercel.png" alt="Vercel">
-          <span>Vercel</span>
-        </div>
+    </section>
+
+    <section class="tech-category" data-tech-category="databases" aria-labelledby="databases-heading">
+      <h2 class="tech-category-heading" id="databases-heading">Databases</h2>
+      <div class="images-container">
+        <article class="image-box tech-card" data-aos="zoom-in"><img src="assets/images/logo-mysql.png" alt="MySQL"><span>MySQL</span></article>
+        <article class="image-box tech-card" data-aos="zoom-in"><img src="assets/images/mongodb.png" alt="MongoDB"><span>MongoDB</span></article>
       </div>
-  </div>
+    </section>
+
+    <section class="tech-category" data-tech-category="tools" aria-labelledby="tools-heading">
+      <h2 class="tech-category-heading" id="tools-heading">Developer Tools &amp; Deployment</h2>
+      <div class="images-container">
+        <article class="image-box tech-card" data-aos="zoom-in"><img src="assets/images/android-studio-logo.png" alt="Android Studio"><span>Android Studio</span></article>
+        <article class="image-box tech-card" data-aos="zoom-in"><img src="assets/images/visual-studio-logo.png" alt="Visual Studio"><span>Visual Studio</span></article>
+        <article class="image-box tech-card" data-aos="zoom-in"><img src="assets/images/postman.webp" alt="Postman"><span>Postman</span></article>
+        <article class="image-box tech-card" data-aos="zoom-in"><img src="assets/images/render.png" alt="Render"><span>Render</span></article>
+        <article class="image-box tech-card" data-aos="zoom-in"><img src="assets/images/Git.png" alt="Git"><span>Git</span></article>
+        <article class="image-box tech-card" data-aos="zoom-in"><img src="assets/images/vercel.png" alt="Vercel"><span>Vercel</span></article>
+      </div>
+    </section>
+  </main>
 
 
 
@@ -211,8 +122,8 @@
       <div class="theme-menu" role="menu" aria-label="Choose theme" hidden>
         <button type="button" role="menuitemradio" aria-checked="true" data-theme="dark">Dark</button>
         <button type="button" role="menuitemradio" aria-checked="false" data-theme="light">Light</button>
-        <button type="button" role="menuitemradio" aria-checked="false" data-theme="teal">Teal</button>
-        <button type="button" role="menuitemradio" aria-checked="false" data-theme="forest">Forest</button>
+        <button type="button" role="menuitemradio" aria-checked="false" data-theme="teal">Crimson</button>
+        <button type="button" role="menuitemradio" aria-checked="false" data-theme="forest">Green</button>
       </div>
     </div>
   </nav>
@@ -238,6 +149,7 @@
   <script>
     AOS.init();
   </script>
+  <script src="js/tech-filters.js"></script>
 
 </body>
 

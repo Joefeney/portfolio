@@ -40,10 +40,72 @@
         z-index: 1;
     }
 
-    .hero img {
-        width: 200px;
-        border-radius: 50%;
+    .hero-visuals {
+        position: relative;
+        width: min(100%, 820px);
+        max-width: 100%;
+        height: clamp(230px, 34vw, 310px);
         margin-bottom: 20px;
+        margin-inline: auto;
+    }
+
+    .hero-portrait {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        z-index: 1;
+        width: min(44vw, 220px);
+        aspect-ratio: 1;
+        border-radius: 50%;
+        object-fit: cover;
+        transform: translate(-50%, -50%);
+    }
+
+    .hero-stand-stage {
+        display: grid;
+        position: absolute;
+        top: 50%;
+        left: calc(50% + clamp(35px, 6vw, 65px));
+        z-index: 0;
+        width: clamp(170px, 26vw, 250px);
+        height: clamp(230px, 34vw, 310px);
+        min-height: 230px;
+        place-items: center;
+        transform: translateY(-50%);
+    }
+
+    .theme-stand-image {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        filter: drop-shadow(0 12px 24px var(--shadow-color));
+    }
+
+    .theme-stand-image.is-entering {
+        animation: stand-slide-in 520ms cubic-bezier(0.18, 0.72, 0.25, 1) both;
+    }
+
+    .theme-stand-image.is-exiting {
+        animation: stand-slide-out 240ms ease-in both;
+    }
+
+    @keyframes stand-slide-in {
+        from {
+            opacity: 0;
+            transform: translateX(-38%) scale(0.96);
+        }
+        to {
+            opacity: 1;
+            transform: translateX(0) scale(1);
+        }
+    }
+
+    @keyframes stand-slide-out {
+        to {
+            opacity: 0;
+            transform: translateX(-38%) scale(0.96);
+        }
     }
 
     .hero h1 {
@@ -168,8 +230,15 @@
 
 
     @media (max-width: 768px) {
-        .hero img {
-            width: 150px;
+        .hero-visuals {
+            height: clamp(220px, 40vw, 270px);
+        }
+
+        .hero-stand-stage {
+            left: calc(50% + clamp(24px, 5vw, 38px));
+            width: clamp(165px, 32vw, 220px);
+            height: clamp(220px, 40vw, 270px);
+            min-height: 220px;
         }
 
         .hero h1 {
@@ -211,8 +280,19 @@
     }
 
     @media (max-width: 480px) {
-        .hero img {
-            width: 120px;
+        .hero-visuals {
+            height: clamp(200px, 54vw, 250px);
+        }
+
+        .hero-portrait {
+            width: clamp(104px, 32vw, 140px);
+        }
+
+        .hero-stand-stage {
+            left: calc(50% + clamp(12px, 4vw, 20px));
+            width: clamp(135px, 42vw, 170px);
+            height: min(44vh, 250px);
+            min-height: 200px;
         }
 
         .hero h1 {
@@ -231,5 +311,12 @@
         #themeBtn {
             font-size: 14px;
             padding: 6px 10px;
+        }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        .theme-stand-image.is-entering,
+        .theme-stand-image.is-exiting {
+            animation: none;
         }
     }

@@ -23,8 +23,13 @@
 
 
   <section class="hero container text-center py-5" id="home">
-    <img src="assets/images/Person.png" alt="My Image" class="img-fluid rounded-circle mb-3" style="max-width: 200px;"
-      data-aos="fade-up" />
+    <div class="hero-visuals" data-aos="fade-up">
+      <img src="assets/images/Person.png" alt="My Image" class="hero-portrait" />
+      <div class="hero-stand-stage">
+        <img id="theme-stand-image" class="theme-stand-image" src="assets/images/stands/stand-dark.png"
+          alt="Purple Haze stand artwork" />
+      </div>
+    </div>
     <h1 class="text" data-aos="fade-up">Joseph Emmanuel Magno</h1>
     <p class="text-warning fs-5" data-aos="fade-up">Aspiring IT Professional</p>
   </section>
@@ -52,8 +57,8 @@
       <div class="theme-menu" role="menu" aria-label="Choose theme" hidden>
         <button type="button" role="menuitemradio" aria-checked="true" data-theme="dark">Dark</button>
         <button type="button" role="menuitemradio" aria-checked="false" data-theme="light">Light</button>
-        <button type="button" role="menuitemradio" aria-checked="false" data-theme="teal">Teal</button>
-        <button type="button" role="menuitemradio" aria-checked="false" data-theme="forest">Forest</button>
+        <button type="button" role="menuitemradio" aria-checked="false" data-theme="teal">Crimson</button>
+        <button type="button" role="menuitemradio" aria-checked="false" data-theme="forest">Green</button>
       </div>
     </div>
   </nav>
@@ -74,6 +79,7 @@
   <script src="js/bganimation.js"></script>
   <script src="js/scroll-control.js"></script>
   <script src="js/theme-switcher.js"></script>
+  <script src="js/stand-theme-image.js"></script>
   <script src="js/oneko.js"></script>
 </body>
 
